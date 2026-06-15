@@ -7,6 +7,9 @@
 
   <title>Siti Raudah Portfolio</title>
 
+  <!-- FANCY + CLEAN FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -42,6 +45,8 @@
       font-size: 24px;
       font-weight: 700;
       color: #d84f93;
+      font-family: "Pacifico", cursive;
+      letter-spacing: 1px;
     }
 
     nav a {
@@ -61,11 +66,23 @@
       padding: 80px 8%;
     }
 
+    .section-box {
+      max-width: 1100px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 28px;
+      padding: 45px;
+      border: 1px solid #f0d8ee;
+      box-shadow: 0 10px 30px rgba(128, 75, 135, 0.12);
+    }
+
     .section-title {
       text-align: center;
-      font-size: 36px;
-      color: #4b2354;
+      font-size: 38px;
+      color: #d84f93;
       margin-bottom: 10px;
+      font-family: "Pacifico", cursive;
+      letter-spacing: 1px;
     }
 
     .section-subtitle {
@@ -95,10 +112,13 @@
       font-size: 48px;
       color: #4b2354;
       margin-bottom: 15px;
+      font-family: "Pacifico", cursive;
+      letter-spacing: 1px;
     }
 
     .hero-text h1 span {
       color: #d84f93;
+      font-family: "Pacifico", cursive;
     }
 
     .hero-text h2 {
@@ -115,35 +135,113 @@
       margin-bottom: 30px;
     }
 
-    .hero-btn {
-      display: inline-block;
-      padding: 12px 24px;
-      background: linear-gradient(135deg, #9b5bb5, #d978b8);
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: 600;
-      transition: 0.3s;
+    .hero-contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 25px;
     }
 
-    .hero-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 18px rgba(155, 91, 181, 0.35);
+    .cute-btn {
+      position: relative;
+      display: inline-block;
+      padding: 12px 22px 12px 44px;
+      background: #ffffff;
+      color: #8a4c91;
+      text-decoration: none;
+      border-radius: 28px;
+      font-weight: 700;
+      border: 2px solid #f3b6d3;
+      box-shadow: 0 8px 22px rgba(216, 79, 147, 0.18);
+      transition: 0.3s ease;
+    }
+
+    .cute-btn::before {
+      content: "🎀";
+      position: absolute;
+      left: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+    }
+
+    .cute-btn:hover {
+      transform: translateY(-5px);
+      background: linear-gradient(135deg, #fff1f8, #ffe7f1);
+      color: #d84f93;
+      box-shadow: 0 12px 28px rgba(216, 79, 147, 0.28);
     }
 
     .hero-image {
       flex: 0.8;
       display: flex;
       justify-content: center;
+      position: relative;
     }
 
-    .hero-image img {
-      width: 320px;
-      height: 320px;
+    .profile-frame {
+      position: relative;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      padding: 14px;
+      background: linear-gradient(135deg, #fff1f8, #f3d7ff, #ffe7f1);
+      box-shadow:
+        0 18px 40px rgba(216, 79, 147, 0.25),
+        0 0 0 12px rgba(255, 255, 255, 0.75);
+      animation: floatPhoto 3.5s ease-in-out infinite;
+    }
+
+    .profile-frame::before {
+      content: "♡";
+      position: absolute;
+      top: 18px;
+      right: 30px;
+      width: 48px;
+      height: 48px;
+      background: #fff1a8;
+      color: #d84f93;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      box-shadow: 0 8px 20px rgba(216, 79, 147, 0.22);
+      z-index: 2;
+    }
+
+    .profile-frame::after {
+      content: "Raudah";
+      position: absolute;
+      left: -18px;
+      bottom: 55px;
+      background: #d84f93;
+      color: #ffffff;
+      padding: 9px 22px;
+      border-radius: 0 20px 20px 0;
+      font-family: "Pacifico", cursive;
+      font-size: 18px;
+      box-shadow: 0 8px 20px rgba(216, 79, 147, 0.28);
+    }
+
+    .profile-frame img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      object-position: center;
       border-radius: 50%;
       border: 8px solid #ffffff;
-      box-shadow: 0 10px 30px rgba(128, 75, 135, 0.25);
+      box-shadow: inset 0 0 0 4px #ffe0ef;
+    }
+
+    @keyframes floatPhoto {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
     }
 
     /* ABOUT */
@@ -152,8 +250,6 @@
     }
 
     .about-content {
-      max-width: 900px;
-      margin: auto;
       background: #fff7fb;
       padding: 35px;
       border-radius: 22px;
@@ -206,6 +302,10 @@
       box-shadow: 0 8px 25px rgba(128, 75, 135, 0.12);
       border: 1px solid #f0d8ee;
       transition: 0.3s;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
     }
 
     .timeline-item::before {
@@ -479,8 +579,6 @@
     }
 
     .contact-box {
-      max-width: 700px;
-      margin: auto;
       background: #fff7fb;
       padding: 35px;
       border-radius: 22px;
@@ -517,6 +615,10 @@
 
       .hero-text h1 {
         font-size: 40px;
+      }
+
+      .hero-contact-buttons {
+        justify-content: center;
       }
 
       .projects-container,
@@ -565,13 +667,17 @@
         font-size: 20px;
       }
 
-      .hero-image img {
-        width: 250px;
-        height: 250px;
+      .profile-frame {
+        width: 270px;
+        height: 270px;
       }
 
       section {
         padding: 60px 6%;
+      }
+
+      .section-box {
+        padding: 28px 20px;
       }
 
       .projects-container,
@@ -616,313 +722,341 @@
       <a href="#projects">Projects</a>
       <a href="#leadership">Leadership</a>
       <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO / PROFILE -->
   <section class="hero" id="about">
     <div class="hero-text">
       <h1>Hi, I'm <span>Siti Raudah</span></h1>
       <h2>Computer Science Undergraduate</h2>
+
       <p>
         Computer Science undergraduate with interests in Data Analytics, Artificial Intelligence,
         and Machine Learning. Gained exposure to deep learning, image processing, data analysis,
         and software development through academic projects.
       </p>
 
-      <a href="#projects" class="hero-btn">View My Projects</a>
+      <div class="hero-contact-buttons">
+        <a href="mailto:sssitiraudah@gmail.com" class="cute-btn">Email Me</a>
+
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank" class="cute-btn">
+          LinkedIn
+        </a>
+
+        <a href="https://github.com/strobeiraudah" target="_blank" class="cute-btn">
+          GitHub
+        </a>
+      </div>
     </div>
 
     <div class="hero-image">
-      <img src="./profile.png" alt="Siti Raudah Profile Photo">
+      <div class="profile-frame">
+        <img src="./profile.png" alt="Siti Raudah Profile Photo">
+      </div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section class="about">
-    <h2 class="section-title">Profile</h2>
-    <p class="section-subtitle">A brief introduction about my background and interests.</p>
+    <div class="section-box">
+      <h2 class="section-title">Profile</h2>
+      <p class="section-subtitle">A brief introduction about my background and interests.</p>
 
-    <div class="about-content">
-      <p>
-        I am a Bachelor of Computer Science (Hons.) student with strong interests in Data Analytics,
-        Artificial Intelligence, and Machine Learning. Through academic and project-based experiences,
-        I have gained exposure to deep learning, image processing, data analysis, and software development.
-        I am passionate about using technology and data to develop practical solutions, with a strong
-        willingness to learn and grow in a professional environment.
-      </p>
+      <div class="about-content">
+        <p>
+          I am a Bachelor of Computer Science (Hons.) student with strong interests in Data Analytics,
+          Artificial Intelligence, and Machine Learning. Through academic and project-based experiences,
+          I have gained exposure to deep learning, image processing, data analysis, and software development.
+          I am passionate about using technology and data to develop practical solutions, with a strong
+          willingness to learn and grow in a professional environment.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- EDUCATION -->
   <section class="education" id="education">
-    <h2 class="section-title">Education</h2>
-    <p class="section-subtitle">My academic journey from secondary school until university.</p>
+    <div class="section-box">
+      <h2 class="section-title">Education</h2>
+      <p class="section-subtitle">My academic journey from secondary school until university.</p>
 
-    <div class="timeline">
+      <div class="timeline">
 
-      <div class="timeline-item">
-        <div class="timeline-img">
-          <img src="./images/smk-maluri.jpg" alt="SMK Taman Maluri">
+        <div class="timeline-item">
+          <div class="timeline-img">
+            <img src="./images/smk-maluri.jpg" alt="SMK Taman Maluri">
+          </div>
+
+          <div class="timeline-content">
+            <span class="timeline-year">2017 – 2021</span>
+            <h3>SMK Taman Maluri, Kuala Lumpur</h3>
+            <h4>Sijil Pelajaran Malaysia (SPM)</h4>
+            <p>
+              Completed secondary education at SMK Taman Maluri, Kuala Lumpur,
+              and achieved <strong>5A in SPM</strong>. This stage built a strong academic foundation
+              and strengthened discipline, communication, and learning skills.
+            </p>
+          </div>
         </div>
 
-        <div class="timeline-content">
-          <span class="timeline-year">2017 – 2021</span>
-          <h3>SMK Taman Maluri, Kuala Lumpur</h3>
-          <h4>Sijil Pelajaran Malaysia (SPM)</h4>
-          <p>
-            Completed secondary education at SMK Taman Maluri, Kuala Lumpur,
-            and achieved <strong>5A in SPM</strong>. This stage built a strong academic foundation
-            and strengthened discipline, communication, and learning skills.
-          </p>
+        <div class="timeline-item">
+          <div class="timeline-img">
+            <img src="./images/melaka-matriculation.jpg" alt="Melaka Matriculation College">
+          </div>
+
+          <div class="timeline-content">
+            <span class="timeline-year">2022 – 2023</span>
+            <h3>Melaka Matriculation College</h3>
+            <h4>Physical Science Programme</h4>
+            <p>
+              Continued pre-university studies in the Physical Science stream and obtained
+              a <strong>CGPA of 3.71</strong>. This experience enhanced analytical thinking,
+              problem-solving, and readiness for university-level studies.
+            </p>
+          </div>
         </div>
+
+        <div class="timeline-item">
+          <div class="timeline-img">
+            <img src="./images/uitm.jpg" alt="Universiti Teknologi MARA">
+          </div>
+
+          <div class="timeline-content">
+            <span class="timeline-year">2023 – 2026</span>
+            <h3>Universiti Teknologi MARA (UiTM)</h3>
+            <h4>Bachelor of Computer Science (Hons.)</h4>
+            <p>
+              Currently pursuing a Bachelor of Computer Science (Hons.) at Universiti Teknologi MARA
+              with a current <strong>CGPA of 3.06</strong>. Gained academic exposure in programming,
+              software development, artificial intelligence, image processing, database management,
+              and data-related projects.
+            </p>
+          </div>
+        </div>
+
       </div>
-
-      <div class="timeline-item">
-        <div class="timeline-img">
-          <img src="./images/melaka-matriculation.jpg" alt="Melaka Matriculation College">
-        </div>
-
-        <div class="timeline-content">
-          <span class="timeline-year">2022 – 2023</span>
-          <h3>Melaka Matriculation College</h3>
-          <h4>Physical Science Programme</h4>
-          <p>
-            Continued pre-university studies in the Physical Science stream and obtained
-            a <strong>CGPA of 3.71</strong>. This experience enhanced analytical thinking,
-            problem-solving, and readiness for university-level studies.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-img">
-          <img src="./images/uitm.jpg" alt="Universiti Teknologi MARA">
-        </div>
-
-        <div class="timeline-content">
-          <span class="timeline-year">2023 – 2026</span>
-          <h3>Universiti Teknologi MARA (UiTM)</h3>
-          <h4>Bachelor of Computer Science (Hons.)</h4>
-          <p>
-            Currently pursuing a Bachelor of Computer Science (Hons.) at Universiti Teknologi MARA
-            with a current <strong>CGPA of 3.06</strong>. Gained academic exposure in programming,
-            software development, artificial intelligence, image processing, database management,
-            and data-related projects.
-          </p>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <!-- WORK EXPERIENCE -->
   <section class="experience" id="experience">
-    <h2 class="section-title">Work Experience</h2>
-    <p class="section-subtitle">Work and business experiences that shaped my professional growth.</p>
+    <div class="section-box">
+      <h2 class="section-title">Work Experience</h2>
+      <p class="section-subtitle">Work and business experiences that shaped my professional growth.</p>
 
-    <div class="experience-container">
+      <div class="experience-container">
 
-      <div class="experience-card">
-        <img src="./images/small-business.jpg" alt="Small Business Owner">
+        <div class="experience-card">
+          <img src="./images/small-business.jpg" alt="Small Business Owner">
 
-        <div class="experience-content">
-          <h3>Small Business Owner</h3>
-          <span>2021 – 2024</span>
-          <p>
-            Managed a small handmade beaded accessories business, including product creation,
-            customer orders, online promotion, customer communication, and basic business management.
-          </p>
+          <div class="experience-content">
+            <h3>Small Business Owner</h3>
+            <span>2021 – 2024</span>
+            <p>
+              Managed a small handmade beaded accessories business, including product creation,
+              customer orders, online promotion, customer communication, and basic business management.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="experience-card">
-        <img src="./images/duck.jpg" alt="dUCk Scarves Trainee">
+        <div class="experience-card">
+          <img src="./images/duck.jpg" alt="dUCk Scarves Trainee">
 
-        <div class="experience-content">
-          <h3>dUCk Scarves Trainee</h3>
-          <span>2021</span>
-          <p>
-            Gained early working experience in a retail environment by assisting with customer service,
-            store operations, product arrangement, and daily sales support.
-          </p>
+          <div class="experience-content">
+            <h3>dUCk Scarves Trainee</h3>
+            <span>2021</span>
+            <p>
+              Gained early working experience in a retail environment by assisting with customer service,
+              store operations, product arrangement, and daily sales support.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="experience-card">
-        <img src="./images/polohaus.jpg" alt="POLOHAUS Trainee">
+        <div class="experience-card">
+          <img src="./images/polohaus.jpg" alt="POLOHAUS Trainee">
 
-        <div class="experience-content">
-          <h3>POLOHAUS Trainee</h3>
-          <span>2026</span>
-          <p>
-            Developed workplace exposure through trainee responsibilities involving customer service,
-            task coordination, communication, teamwork, and professional work ethics.
-          </p>
+          <div class="experience-content">
+            <h3>POLOHAUS Trainee</h3>
+            <span>2026</span>
+            <p>
+              Developed workplace exposure through trainee responsibilities involving customer service,
+              task coordination, communication, teamwork, and professional work ethics.
+            </p>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section class="projects-section" id="projects">
-    <h2 class="section-title">Projects</h2>
-    <p class="section-subtitle">
-      A collection of academic and development projects completed throughout my studies.
-    </p>
+    <div class="section-box">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">
+        A collection of academic and development projects completed throughout my studies.
+      </p>
 
-    <div class="projects-container">
+      <div class="projects-container">
 
-      <div class="project-card">
-        <div class="project-content">
-          <span class="project-category">Final Year Project</span>
+        <div class="project-card">
+          <div class="project-content">
+            <span class="project-category">Final Year Project</span>
 
-          <h3>LexiMath: Handwritten Recognition System</h3>
+            <h3>LexiMath: Handwritten Recognition System</h3>
 
-          <p>
-            A real-time handwritten mathematical expression recognition system developed
-            for dyslexic high school students. The system uses a CNN-ViT model and
-            achieved 99.78% training accuracy, 99.44% validation accuracy, 99.46% best
-            validation accuracy, and 99.18% testing accuracy.
-          </p>
+            <p>
+              A real-time handwritten mathematical expression recognition system developed
+              for dyslexic high school students. The system uses a CNN-ViT model and
+              achieved 99.78% training accuracy, 99.44% validation accuracy, 99.46% best
+              validation accuracy, and 99.18% testing accuracy.
+            </p>
 
-          <div class="project-tags">
-            <span>CNN-ViT</span>
-            <span>Deep Learning</span>
-            <span>Image Processing</span>
+            <div class="project-tags">
+              <span>CNN-ViT</span>
+              <span>Deep Learning</span>
+              <span>Image Processing</span>
+            </div>
+
+            <a href="#" class="project-btn">View Project Report</a>
           </div>
-
-          <a href="#" class="project-btn">View Project Report</a>
         </div>
-      </div>
 
-      <div class="project-card">
-        <div class="project-content">
-          <span class="project-category">Web Development Project</span>
+        <div class="project-card">
+          <div class="project-content">
+            <span class="project-category">Web Development Project</span>
 
-          <h3>Online Bakery Ordering & Pickup System</h3>
+            <h3>Online Bakery Ordering & Pickup System</h3>
 
-          <p>
-            A web-based bakery ordering system that allows customers to browse products,
-            add items to cart, place orders, select pickup times, and track order status.
-            The system also includes admin features for managing products, orders, and reports.
-          </p>
+            <p>
+              A web-based bakery ordering system that allows customers to browse products,
+              add items to cart, place orders, select pickup times, and track order status.
+              The system also includes admin features for managing products, orders, and reports.
+            </p>
 
-          <div class="project-tags">
-            <span>PHP</span>
-            <span>MySQL</span>
-            <span>Web System</span>
+            <div class="project-tags">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Web System</span>
+            </div>
+
+            <a href="#" class="project-btn">View Project Report</a>
           </div>
-
-          <a href="#" class="project-btn">View Project Report</a>
         </div>
-      </div>
 
-      <div class="project-card">
-        <div class="project-content">
-          <span class="project-category">Software Engineering Project</span>
+        <div class="project-card">
+          <div class="project-content">
+            <span class="project-category">Software Engineering Project</span>
 
-          <h3>Komander Kesatria Uniform Management System</h3>
+            <h3>Komander Kesatria Uniform Management System</h3>
 
-          <p>
-            A web-based inventory and booking platform designed to manage army-style
-            uniform borrowing at UiTM Jasin. The system supports uniform stock management,
-            booking requests, borrowing duration, and approval by quartermasters.
-          </p>
+            <p>
+              A web-based inventory and booking platform designed to manage army-style
+              uniform borrowing at UiTM Jasin. The system supports uniform stock management,
+              booking requests, borrowing duration, and approval by quartermasters.
+            </p>
 
-          <div class="project-tags">
-            <span>Java</span>
-            <span>Inventory System</span>
-            <span>Booking System</span>
+            <div class="project-tags">
+              <span>Java</span>
+              <span>Inventory System</span>
+              <span>Booking System</span>
+            </div>
+
+            <a href="#" class="project-btn">View Project Report</a>
           </div>
-
-          <a href="#" class="project-btn">View Project Report</a>
         </div>
-      </div>
 
+      </div>
     </div>
   </section>
 
   <!-- LEADERSHIP -->
   <section class="leadership" id="leadership">
-    <h2 class="section-title">Leadership & Activities</h2>
-    <p class="section-subtitle">Activities that developed my leadership, teamwork, and communication skills.</p>
+    <div class="section-box">
+      <h2 class="section-title">Leadership & Activities</h2>
+      <p class="section-subtitle">Activities that developed my leadership, teamwork, and communication skills.</p>
 
-    <div class="leadership-container">
+      <div class="leadership-container">
 
-      <div class="leadership-card">
-        <h3>Leftenan Muda Kesatria, Series 21/2026</h3>
-        <p>
-          Appointed as Leftenan Muda Kesatria, Series 21/2026. Developed leadership,
-          discipline, teamwork, communication, and responsibility through uniform body activities.
-        </p>
+        <div class="leadership-card">
+          <h3>Leftenan Muda Kesatria, Series 21/2026</h3>
+          <p>
+            Appointed as Leftenan Muda Kesatria, Series 21/2026. Developed leadership,
+            discipline, teamwork, communication, and responsibility through uniform body activities.
+          </p>
+        </div>
+
+        <div class="leadership-card">
+          <h3>Event Committee for Top Coders 2025</h3>
+          <p>
+            Contributed as an event committee member by supporting programme preparation,
+            coordination, communication, and event execution.
+          </p>
+        </div>
+
+        <div class="leadership-card">
+          <h3>Multimedia Bureau Member of Komander Kesatria</h3>
+          <p>
+            Assisted in multimedia-related tasks such as preparing visual content, supporting event
+            documentation, and contributing to digital materials for activities.
+          </p>
+        </div>
+
+        <div class="leadership-card">
+          <h3>Score Orienteering Competition 2025</h3>
+          <p>
+            Participated in the Score Orienteering Competition for Komander Kesatria Endurance Challenge 2025
+            and achieved 5th place, strengthening endurance, strategy, and teamwork.
+          </p>
+        </div>
+
       </div>
-
-      <div class="leadership-card">
-        <h3>Event Committee for Top Coders 2025</h3>
-        <p>
-          Contributed as an event committee member by supporting programme preparation,
-          coordination, communication, and event execution.
-        </p>
-      </div>
-
-      <div class="leadership-card">
-        <h3>Multimedia Bureau Member of Komander Kesatria</h3>
-        <p>
-          Assisted in multimedia-related tasks such as preparing visual content, supporting event
-          documentation, and contributing to digital materials for activities.
-        </p>
-      </div>
-
-      <div class="leadership-card">
-        <h3>Score Orienteering Competition 2025</h3>
-        <p>
-          Participated in the Score Orienteering Competition for Komander Kesatria Endurance Challenge 2025
-          and achieved 5th place, strengthening endurance, strategy, and teamwork.
-        </p>
-      </div>
-
     </div>
   </section>
 
   <!-- SKILLS -->
   <section class="skills" id="skills">
-    <h2 class="section-title">Skills</h2>
-    <p class="section-subtitle">Technical and soft skills gained through academic and project experiences.</p>
+    <div class="section-box">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-subtitle">Technical and soft skills gained through academic and project experiences.</p>
 
-    <div class="skills-container">
-      <span class="skill-tag">Python</span>
-      <span class="skill-tag">Java</span>
-      <span class="skill-tag">PHP</span>
-      <span class="skill-tag">MySQL</span>
-      <span class="skill-tag">HTML</span>
-      <span class="skill-tag">CSS</span>
-      <span class="skill-tag">Deep Learning</span>
-      <span class="skill-tag">Image Processing</span>
-      <span class="skill-tag">Data Analytics</span>
-      <span class="skill-tag">Machine Learning</span>
-      <span class="skill-tag">Problem Solving</span>
-      <span class="skill-tag">Teamwork</span>
+      <div class="skills-container">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">PHP</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">Deep Learning</span>
+        <span class="skill-tag">Image Processing</span>
+        <span class="skill-tag">Data Analytics</span>
+        <span class="skill-tag">Machine Learning</span>
+        <span class="skill-tag">Problem Solving</span>
+        <span class="skill-tag">Teamwork</span>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p class="section-subtitle">Feel free to connect with me.</p>
+    <div class="section-box">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">Feel free to connect with me.</p>
 
-    <div class="contact-box">
-      <p>
-        I am open to internship opportunities, project collaborations, and professional learning experiences.
-      </p>
+      <div class="contact-box">
+        <p>
+          I am open to internship opportunities, project collaborations, and professional learning experiences.
+        </p>
 
-      <p>
-        Email:
-        <a href="mailto:2023406076@student.uitm.edu.my">
-          2023406076@student.uitm.edu.my
-        </a>
-      </p>
+        <p>
+          Email:
+          <a href="mailto:sssitiraudah@gmail.com">
+            sssitiraudah@gmail.com
+          </a>
+        </p>
+      </div>
     </div>
   </section>
 
