@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -388,6 +387,13 @@
     }
 
     .experience-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      background: #f7e8f5;
+    }
+
+    .project-card img {
       width: 100%;
       height: 210px;
       object-fit: cover;
@@ -801,22 +807,30 @@
       <div class="projects-container">
 
         <div class="project-card">
+          <img src="./images/leximath.jpg" alt="LexiMath Handwritten Recognition System">
           <div class="project-content">
-            <span class="project-category">Final Year Project (FYP) </span>
+            <span class="project-category">Final Year Project (FYP)</span>
 
             <h3>LexiMath: Handwritten Recognition System</h3>
 
             <p>
               A real-time handwritten mathematical expression recognition system developed
-              for dyslexic high school students. The system uses a CNN-ViT model and
-              achieved 99.78% training accuracy, 99.44% validation accuracy, 99.46% best
-              validation accuracy, and 99.18% testing accuracy.
+              for dyslexic high school students. The system uses a CNN-ViT model to
+              recognize handwritten characters and mathematical symbols.
+            </p>
+
+            <p>
+              The model achieved <strong>99.78% training accuracy</strong>,
+              <strong>99.44% validation accuracy</strong>,
+              <strong>99.46% best validation accuracy</strong>, and
+              <strong>99.18% testing accuracy</strong>.
             </p>
 
             <div class="project-tags">
               <span>CNN-ViT</span>
               <span>Deep Learning</span>
               <span>Image Processing</span>
+              <span>Python</span>
             </div>
 
             <a href="#" class="project-btn">View Project Report</a>
@@ -824,6 +838,7 @@
         </div>
 
         <div class="project-card">
+          <img src="./images/online-bakery.jpg" alt="Online Bakery Ordering and Pickup System">
           <div class="project-content">
             <span class="project-category">Web Development Project</span>
 
@@ -831,16 +846,20 @@
 
             <p>
               A web-based bakery ordering system that allows customers to browse products,
-              add items to cart, place orders, select pickup times and track order status.
-              The system also includes admin features for managing products, orders and reports.
+              add items to cart, place orders, select pickup times, and track order status.
+            </p>
+
+            <p>
+              The system also includes admin features for managing products, customer orders,
+              pickup information, and reports.
             </p>
 
             <div class="project-tags">
-              <span>PHPMyAdmin</span>
+              <span>PHP</span>
               <span>MySQL</span>
               <span>HTML</span>
-               <span>CSS</span>
-               <span>JavaScript</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
             </div>
 
             <a href="#" class="project-btn">View Project Report</a>
@@ -848,6 +867,7 @@
         </div>
 
         <div class="project-card">
+          <img src="./images/kesatria-uniform.jpg" alt="Komander Kesatria Uniform Management System">
           <div class="project-content">
             <span class="project-category">Software Engineering Project</span>
 
@@ -855,16 +875,79 @@
 
             <p>
               A web-based inventory and booking platform designed to manage army-style
-              uniform borrowing at UiTM Jasin. The system supports uniform stock management,
-              booking requests, borrowing duration, and approval by quartermasters.
+              uniform borrowing at UiTM Jasin. The system supports stock management,
+              booking requests, borrowing duration, and approval by Quartermasters.
             </p>
 
             <div class="project-tags">
               <span>Java</span>
+              <span>JSP</span>
               <span>SRS Document</span>
               <span>SDD Document</span>
               <span>STR Document</span>
-              <span>Jsp</span>
+            </div>
+
+            <a href="#" class="project-btn">View Project Report</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="./images/little-hospital-hero.jpg" alt="Little Hospital Hero Game">
+          <div class="project-content">
+            <span class="project-category">Game Development Project</span>
+
+            <h3>Little Hospital Hero</h3>
+
+            <p>
+              Developed <strong>Little Hospital Hero</strong>, a platform game using
+              <strong>Construct 3</strong>. The game includes <strong>3 levels</strong>
+              and is designed for children aged <strong>7 to 12 years old</strong>.
+              The project focuses on creating a simple, fun and child-friendly game
+              environment while encouraging young players to complete challenges through
+              interactive gameplay.
+            </p>
+
+            <div class="project-tags">
+              <span>Construct 3</span>
+              <span>Game Development</span>
+            </div>
+
+            <a href="#" class="project-btn">View Project Report</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="./images/dyslexia-knn.jpg" alt="Dyslexia Prediction System">
+          <div class="project-content">
+            <span class="project-category">Data Analytics / Intelligent System Project</span>
+
+            <h3>An Intelligent Prediction System for Early Dyslexia Symptoms</h3>
+
+            <p>
+              Designed an intelligent prediction system using the
+              <strong>K-Nearest Neighbors (KNN)</strong> algorithm to predict dyslexia
+              risk based on early symptoms.
+            </p>
+
+            <p>
+              Performed data analysis, created visualizations, designed a KNN-based
+              predictive model, and evaluated the accuracy of the developed model.
+            </p>
+
+            <p>
+              The model achieved an overall <strong>accuracy of 83%</strong>, with a
+              weighted average <strong>precision of 0.83</strong>,
+              <strong>recall of 0.83</strong>, and <strong>F1-score of 0.83</strong>,
+              showing balanced classification performance.
+            </p>
+
+            <div class="project-tags">
+              <span>KNN</span>
+              <span>Machine Learning</span>
+              <span>Data Analytics</span>
+              <span>Deep Learning</span>
+              <span>Data Cleaning</span>
+          
             </div>
 
             <a href="#" class="project-btn">View Project Report</a>
@@ -924,44 +1007,28 @@
   <section class="pink-bg" id="skills">
     <div class="section-box">
       <h2 class="section-title">Skills</h2>
-      <div class="title-line"></div>
-      <p class="section-subtitle">Technical and soft skills gained through academic and project experiences.</p>
+  
 
       <div class="skills-container">
         <span class="skill-tag">Python</span>
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">C#</span>
+        <span class="skill-tag">Power Bi</span>
+        <span class="skill-tag">Excel</span>
         <span class="skill-tag">Java</span>
         <span class="skill-tag">PHP</span>
         <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">PHPMyAdmin</span>
+        <span class="skill-tag">CRUD</span>
         <span class="skill-tag">HTML</span>
         <span class="skill-tag">CSS</span>
+        <span class="skill-tag">JavaScript</span>
         <span class="skill-tag">Deep Learning</span>
         <span class="skill-tag">Image Processing</span>
         <span class="skill-tag">Data Analytics</span>
         <span class="skill-tag">Machine Learning</span>
         <span class="skill-tag">Problem Solving</span>
-        <span class="skill-tag">Teamwork</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="white-bg" id="contact">
-    <div class="section-box">
-      <h2 class="section-title">Contact</h2>
-      <div class="title-line"></div>
-      <p class="section-subtitle">Feel free to connect with me.</p>
-
-      <div class="contact-box">
-        <p>
-          I am open to internship opportunities, project collaborations, and professional learning experiences.
-        </p>
-
-        <p>
-          Email:
-          <a href="mailto:sssitiraudah@gmail.com">
-            sssitiraudah@gmail.com
-          </a>
-        </p>
+        
       </div>
     </div>
   </section>
