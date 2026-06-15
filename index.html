@@ -5,25 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Siti Raudah | Portfolio</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Poppins", Arial, sans-serif;
     }
 
     body {
       background-color: #fff8fb;
       color: #333;
       line-height: 1.6;
+      font-family: "Poppins", Arial, sans-serif;
     }
 
     html {
       scroll-behavior: smooth;
     }
 
-    /* Navbar */
     header {
       background-color: #ffffff;
       padding: 18px 8%;
@@ -37,7 +39,8 @@
     }
 
     .logo {
-      font-size: 22px;
+      font-family: "Playfair Display", serif;
+      font-size: 24px;
       font-weight: 700;
       color: #e75480;
     }
@@ -54,13 +57,13 @@
       color: #e75480;
     }
 
-    /* General Section */
     section {
       padding: 70px 8%;
     }
 
     .section-title {
-      font-size: 30px;
+      font-family: "Playfair Display", serif;
+      font-size: 34px;
       color: #e75480;
       margin-bottom: 25px;
       text-align: center;
@@ -68,11 +71,10 @@
 
     .highlight {
       background-color: #fff1a8;
-      padding: 3px 8px;
-      border-radius: 8px;
+      padding: 3px 10px;
+      border-radius: 10px;
     }
 
-    /* Profile */
     .profile {
       min-height: 90vh;
       display: flex;
@@ -87,21 +89,25 @@
     }
 
     .profile-text h1 {
-      font-size: 42px;
+      font-family: "Playfair Display", serif;
+      font-size: 48px;
       color: #d63384;
       margin-bottom: 10px;
+      line-height: 1.2;
     }
 
     .profile-text h3 {
       font-size: 22px;
       color: #555;
       margin-bottom: 18px;
+      font-weight: 600;
     }
 
     .profile-text p {
       max-width: 650px;
       margin-bottom: 20px;
       color: #555;
+      font-size: 16px;
     }
 
     .profile-img {
@@ -121,6 +127,7 @@
     .btn {
       display: inline-block;
       margin-top: 10px;
+      margin-right: 8px;
       padding: 12px 22px;
       background-color: #e75480;
       color: white;
@@ -135,7 +142,6 @@
       transform: translateY(-2px);
     }
 
-    /* Cards */
     .card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -159,6 +165,7 @@
     .card h3 {
       color: #d63384;
       margin-bottom: 10px;
+      font-size: 20px;
     }
 
     .card p,
@@ -171,7 +178,6 @@
       padding-left: 20px;
     }
 
-    /* Skills */
     .skills-list {
       display: flex;
       flex-wrap: wrap;
@@ -189,7 +195,6 @@
       border: 1px solid #ffc1d6;
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 25px;
@@ -198,7 +203,6 @@
       font-size: 14px;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -220,7 +224,7 @@
       }
 
       .profile-text h1 {
-        font-size: 34px;
+        font-size: 36px;
       }
 
       .profile-img img {
@@ -233,7 +237,6 @@
 
 <body>
 
-  <!-- Navbar -->
   <header>
     <div class="logo">Raudah Portfolio</div>
     <nav>
@@ -247,22 +250,20 @@
     </nav>
   </header>
 
-  <!-- Profile Section -->
   <section class="profile" id="profile">
     <div class="profile-text">
       <h1>Hi, I’m <span class="highlight">Siti Raudah</span></h1>
       <h3>Computer Science Undergraduate</h3>
 
       <p>
-        I am a Computer Science undergraduate with interests in Data Analytics,
-        Artificial Intelligence, and Machine Learning. I have exposure to deep learning,
-        image processing, data analysis, and software development through academic and
-        project-based experiences.
+        Computer Science undergraduate with interests in Data Analytics,
+        Artificial Intelligence, and Machine Learning. Gained exposure to deep learning,
+        image processing, data analysis, and software development through academic projects.
       </p>
 
       <p>
-        I am passionate about using technology and data to develop practical solutions,
-        while continuously improving my technical, analytical, and problem-solving skills.
+        Passionate about using technology and data to develop practical solutions,
+        with a strong willingness to learn, grow, and contribute in a professional environment.
       </p>
 
       <a href="mailto:2023406076@student.uitm.edu.my" class="btn">Email Me</a>
@@ -271,12 +272,10 @@
     </div>
 
     <div class="profile-img">
-      <!-- Change profile.jpg to your own photo file name -->
-      <img src="profile.jpg" alt="Profile Photo">
+      <img src="profile.png" alt="Profile Photo">
     </div>
   </section>
 
-  <!-- Education -->
   <section id="education">
     <h2 class="section-title">Education</h2>
 
@@ -301,7 +300,6 @@
     </div>
   </section>
 
-  <!-- Work Experience -->
   <section id="experience">
     <h2 class="section-title">Work Experience</h2>
 
@@ -325,7 +323,6 @@
     </div>
   </section>
 
-  <!-- Projects -->
   <section id="projects">
     <h2 class="section-title">Projects</h2>
 
@@ -356,7 +353,6 @@
     </div>
   </section>
 
-  <!-- Leadership & Volunteering -->
   <section id="leadership">
     <h2 class="section-title">Leadership & Volunteering</h2>
 
@@ -387,7 +383,6 @@
     </div>
   </section>
 
-  <!-- Co-curricular -->
   <section id="cocurricular">
     <h2 class="section-title">Co-curricular</h2>
 
@@ -418,7 +413,6 @@
     </div>
   </section>
 
-  <!-- Skills -->
   <section id="skills">
     <h2 class="section-title">Skills</h2>
 
@@ -440,7 +434,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2026 Siti Raudah Abu Bakar. All Rights Reserved.</p>
   </footer>
