@@ -15,13 +15,13 @@
       font-family: "Poppins", Arial, sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #fff7fb;
       color: #43214c;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     /* NAVBAR */
@@ -31,7 +31,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.95);
       box-shadow: 0 4px 15px rgba(128, 75, 135, 0.12);
       position: sticky;
       top: 0;
@@ -41,25 +41,43 @@
     .logo {
       font-size: 24px;
       font-weight: 700;
-      color: #8a4c91;
+      color: #d84f93;
     }
 
     nav a {
       margin-left: 25px;
       text-decoration: none;
       color: #5f5265;
-      font-weight: 500;
+      font-weight: 600;
       transition: 0.3s;
     }
 
     nav a:hover {
-      color: #d978b8;
+      color: #d84f93;
     }
 
-    /* HERO SECTION */
+    /* GENERAL SECTION */
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      color: #4b2354;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #6f5b73;
+      font-size: 16px;
+      margin-bottom: 45px;
+    }
+
+    /* HERO */
     .hero {
       min-height: 90vh;
-      padding: 80px 8%;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -80,7 +98,7 @@
     }
 
     .hero-text h1 span {
-      color: #d978b8;
+      color: #d84f93;
     }
 
     .hero-text h2 {
@@ -128,26 +146,7 @@
       box-shadow: 0 10px 30px rgba(128, 75, 135, 0.25);
     }
 
-    /* GENERAL SECTION */
-    section {
-      padding: 80px 8%;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 36px;
-      color: #4b2354;
-      margin-bottom: 10px;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: #6f5b73;
-      font-size: 16px;
-      margin-bottom: 45px;
-    }
-
-    /* ABOUT SECTION */
+    /* ABOUT */
     .about {
       background: #ffffff;
     }
@@ -169,29 +168,58 @@
       text-align: center;
     }
 
-    /* EDUCATION TIMELINE */
+    /* EDUCATION */
     .education {
       background-color: #fff7fb;
       background-image: radial-gradient(#d895cf 2.5px, transparent 2.5px);
       background-size: 28px 28px;
+      position: relative;
     }
 
     .timeline {
       max-width: 1000px;
       margin: auto;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 25px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #f5b7cf;
+      border-radius: 10px;
     }
 
     .timeline-item {
+      position: relative;
       display: flex;
       align-items: center;
       gap: 25px;
       background: #ffffff;
       border-radius: 22px;
-      padding: 22px;
-      margin-bottom: 25px;
+      padding: 25px;
+      margin-bottom: 32px;
+      margin-left: 38px;
       box-shadow: 0 8px 25px rgba(128, 75, 135, 0.12);
       border: 1px solid #f0d8ee;
       transition: 0.3s;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -52px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      background: #d84f93;
+      border: 6px solid #ffe6f0;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px #ffffff;
     }
 
     .timeline-item:hover {
@@ -200,28 +228,35 @@
     }
 
     .timeline-img img {
-      width: 160px;
-      height: 120px;
+      width: 180px;
+      height: 130px;
       object-fit: cover;
       border-radius: 18px;
       background: #f7e8f5;
+      box-shadow: 0 6px 18px rgba(128, 75, 135, 0.15);
     }
 
     .timeline-content h3 {
-      font-size: 21px;
-      color: #43214c;
+      font-size: 22px;
+      color: #d84f93;
       margin-bottom: 8px;
     }
 
-    .timeline-content span {
-      display: inline-block;
-      color: #8a4c91;
-      background: #f7e4f6;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 600;
+    .timeline-content h4 {
+      font-size: 15px;
+      color: #5f5265;
       margin-bottom: 10px;
+    }
+
+    .timeline-year {
+      display: inline-block;
+      color: #a05268;
+      background: #fff1a8;
+      padding: 8px 18px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
 
     .timeline-content p {
@@ -268,7 +303,7 @@
 
     .experience-content h3 {
       font-size: 20px;
-      color: #43214c;
+      color: #d84f93;
       margin-bottom: 8px;
     }
 
@@ -289,7 +324,7 @@
       line-height: 1.7;
     }
 
-    /* PROJECTS SECTION */
+    /* PROJECTS */
     .projects-section {
       background-color: #fff7fb;
       background-image: radial-gradient(#d895cf 2.5px, transparent 2.5px);
@@ -333,7 +368,7 @@
 
     .project-content h3 {
       font-size: 20px;
-      color: #43214c;
+      color: #d84f93;
       margin-bottom: 12px;
       line-height: 1.4;
     }
@@ -378,6 +413,65 @@
       box-shadow: 0 6px 18px rgba(155, 91, 181, 0.35);
     }
 
+    /* LEADERSHIP */
+    .leadership {
+      background: #ffffff;
+    }
+
+    .leadership-container {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .leadership-card {
+      background: #fff7fb;
+      padding: 25px;
+      border-radius: 22px;
+      border: 1px solid #f0d8ee;
+      box-shadow: 0 8px 25px rgba(128, 75, 135, 0.1);
+    }
+
+    .leadership-card h3 {
+      color: #d84f93;
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    .leadership-card p {
+      color: #5f5265;
+      line-height: 1.7;
+      font-size: 14.5px;
+    }
+
+    /* SKILLS */
+    .skills {
+      background-color: #fff7fb;
+      background-image: radial-gradient(#d895cf 2.5px, transparent 2.5px);
+      background-size: 28px 28px;
+    }
+
+    .skills-container {
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .skill-tag {
+      background: #ffffff;
+      color: #7d3f86;
+      padding: 12px 18px;
+      border-radius: 25px;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(128, 75, 135, 0.1);
+      border: 1px solid #f0d8ee;
+    }
+
     /* CONTACT */
     .contact {
       background: #ffffff;
@@ -414,7 +508,7 @@
       font-size: 14px;
     }
 
-    /* RESPONSIVE DESIGN */
+    /* RESPONSIVE */
     @media screen and (max-width: 992px) {
       .hero {
         flex-direction: column-reverse;
@@ -426,7 +520,8 @@
       }
 
       .projects-container,
-      .experience-container {
+      .experience-container,
+      .leadership-container {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -447,9 +542,15 @@
         gap: 15px;
       }
 
+      nav {
+        text-align: center;
+      }
+
       nav a {
         margin: 0 8px;
         font-size: 14px;
+        display: inline-block;
+        margin-bottom: 8px;
       }
 
       .hero {
@@ -474,7 +575,8 @@
       }
 
       .projects-container,
-      .experience-container {
+      .experience-container,
+      .leadership-container {
         grid-template-columns: 1fr;
       }
 
@@ -485,6 +587,18 @@
       .experience-card img {
         height: 190px;
       }
+
+      .timeline::before {
+        left: 12px;
+      }
+
+      .timeline-item {
+        margin-left: 25px;
+      }
+
+      .timeline-item::before {
+        left: -37px;
+      }
     }
   </style>
 </head>
@@ -493,19 +607,20 @@
 
   <!-- HEADER -->
   <header>
-    <div class="logo">Raudah</div>
+    <div class="logo">Welcome to my portfolio</div>
 
     <nav>
-      <a href="#about">About</a>
+      <a href="#about">Profile</a>
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#skills">Skills</a>
     </nav>
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="about">
     <div class="hero-text">
       <h1>Hi, I'm <span>Siti Raudah</span></h1>
       <h2>Computer Science Undergraduate</h2>
@@ -519,13 +634,13 @@
     </div>
 
     <div class="hero-image">
-      <img src="profile.png" alt="Siti Raudah Profile Photo">
+      <img src="./profile.png" alt="Siti Raudah Profile Photo">
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="about" id="about">
-    <h2 class="section-title">About Me</h2>
+  <section class="about">
+    <h2 class="section-title">Profile</h2>
     <p class="section-subtitle">A brief introduction about my background and interests.</p>
 
     <div class="about-content">
@@ -548,42 +663,52 @@
 
       <div class="timeline-item">
         <div class="timeline-img">
-          <img src="images/smk-maluri.jpg" alt="SMK Taman Maluri">
+          <img src="./images/smk-maluri.jpg" alt="SMK Taman Maluri">
         </div>
 
         <div class="timeline-content">
+          <span class="timeline-year">2017 – 2021</span>
           <h3>SMK Taman Maluri, Kuala Lumpur</h3>
-          <span>2017 - 2021</span>
+          <h4>Sijil Pelajaran Malaysia (SPM)</h4>
           <p>
-            Completed secondary education and achieved 5A in SPM.
+            Completed secondary education at SMK Taman Maluri, Kuala Lumpur,
+            and achieved <strong>5A in SPM</strong>. This stage built a strong academic foundation
+            and strengthened discipline, communication, and learning skills.
           </p>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-img">
-          <img src="images/melaka-matriculation.jpg" alt="Melaka Matriculation College">
+          <img src="./images/melaka-matriculation.jpg" alt="Melaka Matriculation College">
         </div>
 
         <div class="timeline-content">
+          <span class="timeline-year">2022 – 2023</span>
           <h3>Melaka Matriculation College</h3>
-          <span>2022 - 2023</span>
+          <h4>Physical Science Programme</h4>
           <p>
-            Completed Physical Science programme with a CGPA of 3.71.
+            Continued pre-university studies in the Physical Science stream and obtained
+            a <strong>CGPA of 3.71</strong>. This experience enhanced analytical thinking,
+            problem-solving, and readiness for university-level studies.
           </p>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-img">
-          <img src="images/uitm.jpg" alt="Universiti Teknologi MARA">
+          <img src="./images/uitm.jpg" alt="Universiti Teknologi MARA">
         </div>
 
         <div class="timeline-content">
-          <h3>Universiti Teknologi MARA</h3>
-          <span>2023 - 2026</span>
+          <span class="timeline-year">2023 – 2026</span>
+          <h3>Universiti Teknologi MARA (UiTM)</h3>
+          <h4>Bachelor of Computer Science (Hons.)</h4>
           <p>
-            Pursuing Bachelor of Computer Science (Hons.) with a current CGPA of 3.06.
+            Currently pursuing a Bachelor of Computer Science (Hons.) at Universiti Teknologi MARA
+            with a current <strong>CGPA of 3.06</strong>. Gained academic exposure in programming,
+            software development, artificial intelligence, image processing, database management,
+            and data-related projects.
           </p>
         </div>
       </div>
@@ -599,40 +724,40 @@
     <div class="experience-container">
 
       <div class="experience-card">
-        <img src="images/small-business.jpg" alt="Small Business Owner">
+        <img src="./images/small-business.jpg" alt="Small Business Owner">
 
         <div class="experience-content">
           <h3>Small Business Owner</h3>
-          <span>2021 - 2024</span>
+          <span>2021 – 2024</span>
           <p>
             Managed a small handmade beaded accessories business, including product creation,
-            customer orders, online promotion, and customer communication.
+            customer orders, online promotion, customer communication, and basic business management.
           </p>
         </div>
       </div>
 
       <div class="experience-card">
-        <img src="images/duck.jpg" alt="dUCk Scarves Trainee">
+        <img src="./images/duck.jpg" alt="dUCk Scarves Trainee">
 
         <div class="experience-content">
           <h3>dUCk Scarves Trainee</h3>
           <span>2021</span>
           <p>
             Gained early working experience in a retail environment by assisting with customer service,
-            store operations, and daily product handling.
+            store operations, product arrangement, and daily sales support.
           </p>
         </div>
       </div>
 
       <div class="experience-card">
-        <img src="images/polohaus.jpg" alt="POLOHAUS Trainee">
+        <img src="./images/polohaus.jpg" alt="POLOHAUS Trainee">
 
         <div class="experience-content">
           <h3>POLOHAUS Trainee</h3>
           <span>2026</span>
           <p>
             Developed workplace exposure through trainee responsibilities involving customer service,
-            task coordination, communication, and professional work ethics.
+            task coordination, communication, teamwork, and professional work ethics.
           </p>
         </div>
       </div>
@@ -668,9 +793,7 @@
             <span>Image Processing</span>
           </div>
 
-          <a href="#" class="project-btn">
-            View Project Report
-          </a>
+          <a href="#" class="project-btn">View Project Report</a>
         </div>
       </div>
 
@@ -692,9 +815,7 @@
             <span>Web System</span>
           </div>
 
-          <a href="#" class="project-btn">
-            View Project Report
-          </a>
+          <a href="#" class="project-btn">View Project Report</a>
         </div>
       </div>
 
@@ -716,12 +837,73 @@
             <span>Booking System</span>
           </div>
 
-          <a href="#" class="project-btn">
-            View Project Report
-          </a>
+          <a href="#" class="project-btn">View Project Report</a>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="leadership" id="leadership">
+    <h2 class="section-title">Leadership & Activities</h2>
+    <p class="section-subtitle">Activities that developed my leadership, teamwork, and communication skills.</p>
+
+    <div class="leadership-container">
+
+      <div class="leadership-card">
+        <h3>Leftenan Muda Kesatria, Series 21/2026</h3>
+        <p>
+          Appointed as Leftenan Muda Kesatria, Series 21/2026. Developed leadership,
+          discipline, teamwork, communication, and responsibility through uniform body activities.
+        </p>
+      </div>
+
+      <div class="leadership-card">
+        <h3>Event Committee for Top Coders 2025</h3>
+        <p>
+          Contributed as an event committee member by supporting programme preparation,
+          coordination, communication, and event execution.
+        </p>
+      </div>
+
+      <div class="leadership-card">
+        <h3>Multimedia Bureau Member of Komander Kesatria</h3>
+        <p>
+          Assisted in multimedia-related tasks such as preparing visual content, supporting event
+          documentation, and contributing to digital materials for activities.
+        </p>
+      </div>
+
+      <div class="leadership-card">
+        <h3>Score Orienteering Competition 2025</h3>
+        <p>
+          Participated in the Score Orienteering Competition for Komander Kesatria Endurance Challenge 2025
+          and achieved 5th place, strengthening endurance, strategy, and teamwork.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <p class="section-subtitle">Technical and soft skills gained through academic and project experiences.</p>
+
+    <div class="skills-container">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">Java</span>
+      <span class="skill-tag">PHP</span>
+      <span class="skill-tag">MySQL</span>
+      <span class="skill-tag">HTML</span>
+      <span class="skill-tag">CSS</span>
+      <span class="skill-tag">Deep Learning</span>
+      <span class="skill-tag">Image Processing</span>
+      <span class="skill-tag">Data Analytics</span>
+      <span class="skill-tag">Machine Learning</span>
+      <span class="skill-tag">Problem Solving</span>
+      <span class="skill-tag">Teamwork</span>
     </div>
   </section>
 
@@ -744,10 +926,10 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2026 Siti Raudah Abu Bakar. All Rights Reserved.</p>
   </footer>
 
 </body>
 </html>
+```
