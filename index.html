@@ -15,15 +15,15 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background-color: #fff8fb;
       color: #333;
       line-height: 1.6;
       font-family: "Poppins", Arial, sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     header {
@@ -46,7 +46,7 @@
     }
 
     nav a {
-      margin-left: 20px;
+      margin-left: 18px;
       text-decoration: none;
       color: #555;
       font-size: 14px;
@@ -63,9 +63,9 @@
 
     .section-title {
       font-family: "Playfair Display", serif;
-      font-size: 34px;
+      font-size: 36px;
       color: #e75480;
-      margin-bottom: 25px;
+      margin-bottom: 35px;
       text-align: center;
     }
 
@@ -75,6 +75,7 @@
       border-radius: 10px;
     }
 
+    /* Profile */
     .profile {
       min-height: 90vh;
       display: flex;
@@ -97,14 +98,14 @@
     }
 
     .profile-text h3 {
-      font-size: 22px;
+      font-size: 20px;
       color: #555;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
       font-weight: 600;
     }
 
     .profile-text p {
-      max-width: 650px;
+      max-width: 680px;
       margin-bottom: 20px;
       color: #555;
       font-size: 16px;
@@ -116,8 +117,8 @@
     }
 
     .profile-img img {
-      width: 280px;
-      height: 280px;
+      width: 290px;
+      height: 290px;
       object-fit: cover;
       border-radius: 50%;
       border: 8px solid #ffffff;
@@ -142,6 +143,156 @@
       transform: translateY(-2px);
     }
 
+    /* Timeline */
+    .timeline {
+      position: relative;
+      max-width: 1050px;
+      margin: 0 auto;
+      padding-left: 35px;
+      border-left: 4px solid #ffc1d6;
+    }
+
+    .timeline-item {
+      position: relative;
+      background: #ffffff;
+      margin-bottom: 30px;
+      padding: 22px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(255, 182, 193, 0.25);
+      transition: 0.3s;
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(231, 84, 128, 0.25);
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -47px;
+      top: 30px;
+      width: 18px;
+      height: 18px;
+      background: #e75480;
+      border: 4px solid #fff8fb;
+      border-radius: 50%;
+    }
+
+    .timeline-year {
+      display: inline-block;
+      background: #fff1a8;
+      color: #a64d79;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 6px 13px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    .timeline-content {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .timeline-img img {
+      width: 145px;
+      height: 145px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    }
+
+    .timeline-text {
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .timeline-text h3 {
+      color: #d63384;
+      margin-bottom: 8px;
+      font-size: 21px;
+    }
+
+    .timeline-text h4 {
+      color: #666;
+      font-size: 15px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .timeline-text p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* Project Cards */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 6px 20px rgba(255, 182, 193, 0.25);
+      border-top: 5px solid #ffc1d6;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(231, 84, 128, 0.25);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 15px;
+      background-color: #ffe4ec;
+    }
+
+    .project-type {
+      display: inline-block;
+      background: #ffe4ec;
+      color: #d63384;
+      padding: 6px 12px;
+      border-radius: 18px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .project-card h3 {
+      color: #d63384;
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .project-card p {
+      color: #555;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .project-card ul {
+      padding-left: 18px;
+      margin-bottom: 10px;
+    }
+
+    .project-card li {
+      margin-bottom: 6px;
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* Normal Cards */
     .card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -178,6 +329,7 @@
       padding-left: 20px;
     }
 
+    /* Skills */
     .skills-list {
       display: flex;
       flex-wrap: wrap;
@@ -203,7 +355,7 @@
       font-size: 14px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       header {
         flex-direction: column;
       }
@@ -231,14 +383,33 @@
         width: 220px;
         height: 220px;
       }
+
+      .timeline {
+        padding-left: 22px;
+      }
+
+      .timeline-item::before {
+        left: -34px;
+      }
+
+      .timeline-content {
+        flex-direction: column;
+      }
+
+      .timeline-img img {
+        width: 100%;
+        max-width: 230px;
+        height: auto;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- Navbar -->
   <header>
-    <div class="logo">Raudah Portfolio</div>
+    <div class="logo">Welcome to my portfolio</div>
     <nav>
       <a href="#profile">Profile</a>
       <a href="#education">Education</a>
@@ -250,25 +421,27 @@
     </nav>
   </header>
 
+  <!-- Profile -->
   <section class="profile" id="profile">
     <div class="profile-text">
-      <h1>Hi, I’m <span class="highlight">Siti Raudah</span></h1>
-      <h3>Computer Science Undergraduate</h3>
+      <h1>Hi, I’m <span class="highlight">SITI RAUDAH BINTI ABU BAKAR</span></h1>
+      <h3>Bachelor of Computer Science (Hons.)</h3>
+      <h3>Universiti Teknologi MARA, UiTM Jasin</h3>
 
       <p>
-        Computer Science undergraduate with interests in Data Analytics,
-        Artificial Intelligence, and Machine Learning. Gained exposure to deep learning,
-        image processing, data analysis, and software development through academic projects.
+        Computer Science undergraduate with strong interests in data analytics, artificial intelligence,
+        machine learning, and web development. Gained exposure to programming, database management,
+        data visualization, dashboard preparation, documentation, and system testing through academic projects.
       </p>
 
       <p>
-        Passionate about using technology and data to develop practical solutions,
-        with a strong willingness to learn, grow, and contribute in a professional environment.
+        Passionate about using technology and data to develop practical solutions, with a strong willingness
+        to learn, grow, and contribute effectively in a professional environment.
       </p>
 
-      <a href="mailto:2023406076@student.uitm.edu.my" class="btn">Email Me</a>
+      <a href="mailto:sssitiraudah@gmail.com" class="btn">Email Me</a>
       <a href="https://www.linkedin.com/" target="_blank" class="btn">LinkedIn</a>
-      <a href="https://github.com/" target="_blank" class="btn">GitHub</a>
+      <a href="https://github.com/StroberiRaudah" target="_blank" class="btn">GitHub</a>
     </div>
 
     <div class="profile-img">
@@ -276,83 +449,228 @@
     </div>
   </section>
 
+  <!-- Education -->
   <section id="education">
     <h2 class="section-title">Education</h2>
 
-    <div class="card-container">
-      <div class="card">
-        <h3>Bachelor of Computer Science (Hons.)</h3>
-        <p><strong>Institution:</strong> Universiti Teknologi MARA (UiTM)</p>
-        <p><strong>Field:</strong> Computer Science</p>
-        <p><strong>Status:</strong> Undergraduate Student</p>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <span class="timeline-year">2017 – 2021</span>
+        <div class="timeline-content">
+          <div class="timeline-img">
+            <img src="smk-maluri.jpg" alt="SMK Taman Maluri">
+          </div>
+          <div class="timeline-text">
+            <h3>SMK Taman Maluri, Kuala Lumpur</h3>
+            <h4>Sijil Pelajaran Malaysia (SPM)</h4>
+            <p>
+              Completed secondary education at SMK Taman Maluri, Kuala Lumpur, and achieved
+              <strong>5A in SPM</strong>. This stage built a strong academic foundation and strengthened
+              discipline, communication, and learning skills.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Relevant Academic Exposure</h3>
-        <ul>
-          <li>Artificial Intelligence</li>
-          <li>Machine Learning</li>
-          <li>Image Processing</li>
-          <li>Data Analytics</li>
-          <li>Software Development</li>
-        </ul>
+      <div class="timeline-item">
+        <span class="timeline-year">2022 – 2023</span>
+        <div class="timeline-content">
+          <div class="timeline-img">
+            <img src="melaka-matriculation.jpg" alt="Melaka Matriculation College">
+          </div>
+          <div class="timeline-text">
+            <h3>Melaka Matriculation College</h3>
+            <h4>Physical Science Programme</h4>
+            <p>
+              Continued pre-university studies in the Physical Science stream and obtained a
+              <strong>CGPA of 3.71</strong>. This experience enhanced analytical thinking, problem-solving,
+              and readiness for university-level studies.
+            </p>
+          </div>
+        </div>
       </div>
+
+      <div class="timeline-item">
+        <span class="timeline-year">2023 – 2026</span>
+        <div class="timeline-content">
+          <div class="timeline-img">
+            <img src="uitm.jpg" alt="Universiti Teknologi MARA">
+          </div>
+          <div class="timeline-text">
+            <h3>Universiti Teknologi MARA (UiTM)</h3>
+            <h4>Bachelor of Computer Science (Hons.)</h4>
+            <p>
+              Currently pursuing a Bachelor of Computer Science (Hons.) at Universiti Teknologi MARA
+              with a current <strong>CGPA of 3.06</strong>. Gained academic exposure in programming,
+              software development, artificial intelligence, image processing, database management,
+              and data-related projects.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- Work Experience -->
   <section id="experience">
     <h2 class="section-title">Work Experience</h2>
 
-    <div class="card-container">
-      <div class="card">
-        <h3>Internship / Work Experience</h3>
-        <p><strong>Company:</strong> Add your company name here</p>
-        <p><strong>Position:</strong> Add your position here</p>
-        <p>
-          Describe your responsibilities, tasks, and what you learned from the experience.
-        </p>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <span class="timeline-year">2021 – 2024</span>
+        <div class="timeline-content">
+          <div class="timeline-img">
+            <img src="small-business.jpg" alt="Small Business Owner">
+          </div>
+          <div class="timeline-text">
+            <h3>Small Business Owner</h3>
+            <h4>Beaded Handmade Accessories</h4>
+            <p>
+              Managed a small business selling beaded handmade accessories. Involved in product design,
+              material preparation, customer communication, sales handling, packaging, and social media
+              promotion. This experience developed creativity, responsibility, customer service skills,
+              and entrepreneurial thinking.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Academic Project Experience</h3>
-        <p>
-          Gained hands-on experience in developing systems, building models,
-          preparing reports, and applying technical knowledge through university projects.
-        </p>
+      <div class="timeline-item">
+        <span class="timeline-year">2021</span>
+        <div class="timeline-content">
+          <div class="timeline-img">
+            <img src="duck.jpg" alt="dUCk Scarves">
+          </div>
+          <div class="timeline-text">
+            <h3>Trainee</h3>
+            <h4>dUCk Scarves</h4>
+            <p>
+              Gained early workplace exposure as a trainee at dUCk Scarves. Developed basic professional
+              skills such as communication, teamwork, customer handling, task responsibility, and adaptability
+              in a brand-oriented business environment.
+            </p>
+          </div>
+        </div>
       </div>
+
+      <div class="timeline-item">
+        <span class="timeline-year">2026</span>
+        <div class="timeline-content">
+          <div class="timeline-img">
+            <img src="polohaus.jpg" alt="POLOHAUS">
+          </div>
+          <div class="timeline-text">
+            <h3>Trainee</h3>
+            <h4>POLOHAUS</h4>
+            <p>
+              Gained industry exposure as a trainee at POLOHAUS, strengthening communication, adaptability,
+              teamwork, and understanding of workplace operations in a structured professional setting.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- Projects -->
   <section id="projects">
     <h2 class="section-title">Projects</h2>
 
-    <div class="card-container">
-      <div class="card">
-        <h3>LEXIRISE</h3>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <img src="leximath.jpg" alt="LexiMath Project">
+        <span class="project-type">Final Year Project</span>
+        <h3>LexiMath: Handwritten Recognition System</h3>
         <p>
-          A Unity 3D mobile educational game designed to support dyslexic students
-          through reading, writing, and spelling activities in an interactive learning environment.
+          Developed a handwritten mathematical symbol recognition system using a
+          <strong>CNN–ViT hybrid model</strong>. The system focuses on recognizing handwritten
+          mathematical symbols and supporting educational technology through deep learning.
+        </p>
+        <ul>
+          <li>Training Accuracy: <strong>99.78%</strong></li>
+          <li>Validation Accuracy: <strong>99.44%</strong></li>
+          <li>Best Validation Accuracy: <strong>99.46%</strong></li>
+          <li>Testing Accuracy: <strong>99.18%</strong></li>
+        </ul>
+        <p>
+          These results show strong model performance and reliability in recognizing handwritten
+          mathematical symbols effectively.
         </p>
       </div>
 
-      <div class="card">
-        <h3>Dyslexic Handwriting Recognition System</h3>
+      <div class="project-card">
+        <img src="sweetcrumbs.jpg" alt="SweetCrumbs Online Bakery Ordering System">
+        <span class="project-type">Web System Project</span>
+        <h3>SweetCrumbs: Online Bakery Ordering System</h3>
         <p>
-          A real-time system that recognizes handwritten mathematical expressions using
-          a CNN-ViT deep learning model, with preprocessing techniques to improve handwriting clarity.
+          Developed <strong>SweetCrumbs</strong>, a pickup-only online bakery ordering system that allows
+          customers to browse, add items to cart, place orders, choose pickup time, and track order status.
+        </p>
+        <p>
+          The system includes more than <strong>20 food and drink items</strong>. One interesting part of
+          this project was the complete customer order flow, from browsing products to pickup scheduling,
+          which made the system feel realistic and practical for bakery operations.
         </p>
       </div>
 
-      <div class="card">
-        <h3>Online Bakery Ordering System</h3>
+      <div class="project-card">
+        <img src="little-hospital-hero.jpg" alt="Little Hospital Hero Game">
+        <span class="project-type">Game Development Project</span>
+        <h3>Little Hospital Hero</h3>
         <p>
-          A web-based system that allows customers to browse products, add items to cart,
-          place orders, select pickup time, and track order status.
+          Developed <strong>Little Hospital Hero</strong>, a platform game using <strong>Construct 3</strong>.
+          The game includes <strong>3 levels</strong> and is designed for children aged <strong>7 to 12 years old</strong>.
+        </p>
+        <p>
+          The project focuses on creating a simple, fun, and child-friendly game environment while encouraging
+          young players to complete challenges through interactive gameplay.
         </p>
       </div>
+
+      <div class="project-card">
+        <img src="kesatria-inventory.jpg" alt="Komander Kesatria Inventory System">
+        <span class="project-type">Inventory System Project</span>
+        <h3>Komander Kesatria Inventory System</h3>
+        <p>
+          Developed an inventory system for Komander Kesatria to support the <strong>Quartermaster</strong>,
+          who is responsible for managing and auditing uniforms and accessories.
+        </p>
+        <p>
+          The system helps organize inventory records for items such as <strong>No.1 Uniform</strong>,
+          <strong>Mess Kit</strong>, <strong>No.5 Uniform</strong>, and other Kesatria accessories, making
+          stock management and auditing more systematic and efficient.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <img src="dyslexia-knn.jpg" alt="Dyslexia Prediction System">
+        <span class="project-type">Data Analytics / Intelligent System Project</span>
+        <h3>An Intelligent Prediction System for Early Dyslexia Symptoms</h3>
+        <p>
+          Designed an intelligent prediction system using the <strong>K-Nearest Neighbors (KNN)</strong>
+          algorithm to predict dyslexia risk based on early symptoms.
+        </p>
+        <ul>
+          <li>Designed a KNN-based predictive model to identify dyslexia risk.</li>
+          <li>Evaluated the accuracy of the developed predictive model.</li>
+          <li>Performed data analysis and created visualizations to identify trends and patterns in early dyslexia symptoms.</li>
+        </ul>
+        <p>
+          The model achieved an overall <strong>accuracy of 83%</strong>, with a weighted average
+          <strong>precision of 0.83</strong>, <strong>recall of 0.83</strong>, and
+          <strong>F1-score of 0.83</strong>, showing balanced classification performance.
+        </p>
+      </div>
+
     </div>
   </section>
 
+  <!-- Leadership & Volunteering -->
   <section id="leadership">
     <h2 class="section-title">Leadership & Volunteering</h2>
 
@@ -383,6 +701,7 @@
     </div>
   </section>
 
+  <!-- Co-curricular -->
   <section id="cocurricular">
     <h2 class="section-title">Co-curricular</h2>
 
@@ -413,6 +732,7 @@
     </div>
   </section>
 
+  <!-- Skills -->
   <section id="skills">
     <h2 class="section-title">Skills</h2>
 
@@ -424,16 +744,24 @@
       <span class="skill">PHP</span>
       <span class="skill">MySQL</span>
       <span class="skill">Unity</span>
+      <span class="skill">Construct 3</span>
       <span class="skill">Machine Learning</span>
       <span class="skill">Deep Learning</span>
+      <span class="skill">CNN-ViT</span>
+      <span class="skill">KNN</span>
       <span class="skill">Image Processing</span>
       <span class="skill">Data Analytics</span>
+      <span class="skill">Data Visualization</span>
+      <span class="skill">Dashboard Preparation</span>
+      <span class="skill">Documentation</span>
+      <span class="skill">System Testing</span>
       <span class="skill">Problem Solving</span>
       <span class="skill">Teamwork</span>
       <span class="skill">Communication</span>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2026 Siti Raudah Abu Bakar. All Rights Reserved.</p>
   </footer>
