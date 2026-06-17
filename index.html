@@ -60,6 +60,18 @@
       color: #d84f93;
     }
 
+    /* NEW: Skill group label */
+    .skill-group-label {
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #8a4c91;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin: 18px 0 6px;
+    }
+
     /* GENERAL SECTION */
     section {
       padding: 80px 8%;
@@ -632,10 +644,199 @@
         left: -37px;
       }
     }
+
+    /* NEW: Project card image links — keeps image display correct */
+    .project-card > a {
+      display: block;
+      overflow: hidden;
+    }
+
+    /* NEW: Activity card images (leadership & co-curricular) */
+    .activity-img {
+      width: calc(100% + 50px);
+      height: 160px;
+      object-fit: cover;
+      display: block;
+      margin: -25px -25px 18px -25px;
+      background: #f7e8f5;
+    }
+
+    @media screen and (max-width: 650px) {
+      .activity-img {
+        width: calc(100% + 44px);
+        margin: -25px -22px 16px -22px;
+      }
+    }
+
+    /* ============================================================
+       PINK NEON BACKGROUND ANIMATION — NEW CSS ONLY
+       ============================================================ */
+
+    /* Background layer: fixed behind all content */
+    .neon-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 2;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    /* Lift existing content cards above the neon layer */
+    .section-box,
+    .hero-box,
+    footer {
+      position: relative;
+      z-index: 5;
+    }
+
+    /* Base for every neon shape */
+    .neon-shape {
+      position: absolute;
+      opacity: 0;
+    }
+
+    /* Glowing Bubbles / Circles */
+    .neon-circle {
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,182,215,0.30) 0%, rgba(255,105,180,0.08) 60%, transparent 100%);
+      box-shadow:
+        0 0 18px rgba(255,105,180,0.45),
+        0 0 38px rgba(255,105,180,0.25),
+        0 0 65px rgba(255,105,180,0.12);
+    }
+    .neon-c1 { width: 130px; height: 130px; top:  8%; left:  4%; animation: neonFloat  7.5s ease-in-out infinite  0.0s; }
+    .neon-c2 { width:  75px; height:  75px; top: 22%; right:  7%; animation: neonFloat  9.2s ease-in-out infinite -2.5s; }
+    .neon-c3 { width: 170px; height: 170px; top: 52%; left:  1%; animation: neonFloat 11.0s ease-in-out infinite -4.0s; }
+    .neon-c4 { width:  55px; height:  55px; top: 72%; right: 14%; animation: neonFloat  8.0s ease-in-out infinite -1.0s; }
+    .neon-c5 { width: 105px; height: 105px; top: 87%; left: 43%; animation: neonFloat 10.5s ease-in-out infinite -3.5s; }
+
+    /* Glowing Neon Hearts */
+    .neon-heart {
+      line-height: 1;
+      color: rgba(255,20,147,0.65);
+      text-shadow:
+        0 0  8px #ff1493,
+        0 0 18px #ff1493,
+        0 0 32px #ff69b4,
+        0 0 55px rgba(255,105,180,0.50);
+    }
+    .neon-h1 { top: 14%; left: 16%; font-size: 26px; animation: neonFloat  8.5s ease-in-out infinite -1.0s; }
+    .neon-h2 { top: 38%; right:  5%; font-size: 42px; animation: neonFloat 10.2s ease-in-out infinite -3.0s; }
+    .neon-h3 { top: 63%; left:  7%; font-size: 20px; animation: neonFloat  7.0s ease-in-out infinite -5.5s; }
+    .neon-h4 { top: 82%; right: 22%; font-size: 36px; animation: neonFloat  9.5s ease-in-out infinite -2.0s; }
+
+    /* Glowing Neon Stars (slow spin) */
+    .neon-star {
+      line-height: 1;
+      color: rgba(200,100,230,0.75);
+      text-shadow:
+        0 0  8px #c864e6,
+        0 0 20px #c864e6,
+        0 0 42px rgba(200,100,230,0.50);
+    }
+    .neon-s1 { top:  5%; left: 42%; font-size: 22px; animation: neonSpin 12.0s ease-in-out infinite  0.0s; }
+    .neon-s2 { top: 48%; right:  2%; font-size: 38px; animation: neonSpin 14.5s ease-in-out infinite -4.0s; }
+    .neon-s3 { top: 78%; left: 28%; font-size: 18px; animation: neonSpin 10.5s ease-in-out infinite -2.5s; }
+
+    /* Glowing Sparkles (twinkle) */
+    .neon-sparkle {
+      line-height: 1;
+      color: rgba(255,255,255,0.90);
+      text-shadow:
+        0 0  6px #ffffff,
+        0 0 14px #ffb3d9,
+        0 0 28px rgba(255,182,217,0.70);
+    }
+    .neon-sp1 { top: 28%; left: 26%; font-size: 18px; animation: neonTwinkle 5.0s ease-in-out infinite -1.0s; }
+    .neon-sp2 { top: 57%; right: 27%; font-size: 22px; animation: neonTwinkle 6.5s ease-in-out infinite -3.0s; }
+
+    /* Soft Glowing Blobs (large blurred ambient shapes) */
+    .neon-blob {
+      filter: blur(35px);
+      background: radial-gradient(ellipse, rgba(255,150,200,0.18) 0%, rgba(180,100,220,0.10) 55%, transparent 100%);
+      border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
+    }
+    .neon-b1 { width: 320px; height: 260px; top:  2%; left:  -6%; animation: neonFloat 16.0s ease-in-out infinite  0.0s; }
+    .neon-b2 { width: 260px; height: 310px; top: 42%; right: -9%; animation: neonFloat 19.0s ease-in-out infinite -7.0s; }
+    .neon-b3 { width: 360px; height: 210px; bottom: 4%; left: 18%; animation: neonFloat 21.0s ease-in-out infinite -11.0s; }
+
+    /* Keyframes */
+    @keyframes neonFloat {
+      0%   { opacity: 0;    transform: translateY(  0px) scale(0.94); }
+      12%  { opacity: 1; }
+      50%  { opacity: 0.70; transform: translateY(-24px) scale(1.06); }
+      88%  { opacity: 1; }
+      100% { opacity: 0;    transform: translateY(  0px) scale(0.94); }
+    }
+    @keyframes neonSpin {
+      0%   { opacity: 0;    transform: translateY(  0px) rotate(  0deg) scale(0.90); }
+      15%  { opacity: 0.80; }
+      50%  { opacity: 0.60; transform: translateY(-20px) rotate(180deg) scale(1.10); }
+      85%  { opacity: 0.80; }
+      100% { opacity: 0;    transform: translateY(  0px) rotate(360deg) scale(0.90); }
+    }
+    @keyframes neonTwinkle {
+      0%   { opacity: 0;   transform: scale(0.4); }
+      25%  { opacity: 1;   transform: scale(1.3); }
+      50%  { opacity: 0.3; transform: scale(0.7); }
+      75%  { opacity: 1;   transform: scale(1.2); }
+      100% { opacity: 0;   transform: scale(0.4); }
+    }
+
+    /* Responsive: shrink large shapes on mobile */
+    @media screen and (max-width: 650px) {
+      .neon-c3 { width: 110px; height: 110px; }
+      .neon-b1 { width: 210px; height: 170px; }
+      .neon-b2 { width: 175px; height: 200px; }
+      .neon-b3 { width: 230px; height: 135px; }
+      .neon-h2 { font-size: 28px; }
+      .neon-s2 { font-size: 26px; }
+    }
+    /* ============================================================
+       END PINK NEON BACKGROUND ANIMATION
+       ============================================================ */
   </style>
 </head>
 
 <body>
+
+  <!-- ============================================================
+       PINK NEON BACKGROUND ANIMATION — NEW HTML BLOCK ONLY
+       ============================================================ -->
+  <div class="neon-bg" aria-hidden="true">
+
+    <!-- Glowing Bubbles / Circles -->
+    <div class="neon-shape neon-circle neon-c1"></div>
+    <div class="neon-shape neon-circle neon-c2"></div>
+    <div class="neon-shape neon-circle neon-c3"></div>
+    <div class="neon-shape neon-circle neon-c4"></div>
+    <div class="neon-shape neon-circle neon-c5"></div>
+
+    <!-- Glowing Neon Hearts -->
+    <span class="neon-shape neon-heart neon-h1">♡</span>
+    <span class="neon-shape neon-heart neon-h2">♡</span>
+    <span class="neon-shape neon-heart neon-h3">♡</span>
+    <span class="neon-shape neon-heart neon-h4">♡</span>
+
+    <!-- Glowing Neon Stars -->
+    <span class="neon-shape neon-star neon-s1">✦</span>
+    <span class="neon-shape neon-star neon-s2">✦</span>
+    <span class="neon-shape neon-star neon-s3">✧</span>
+
+    <!-- Glowing Sparkles -->
+    <span class="neon-shape neon-sparkle neon-sp1">✦</span>
+    <span class="neon-shape neon-sparkle neon-sp2">✧</span>
+
+    <!-- Soft Glowing Blobs -->
+    <div class="neon-shape neon-blob neon-b1"></div>
+    <div class="neon-shape neon-blob neon-b2"></div>
+    <div class="neon-shape neon-blob neon-b3"></div>
+
+  </div>
+  <!-- END PINK NEON BACKGROUND ANIMATION -->
 
   <!-- HEADER -->
   <header>
@@ -646,12 +847,12 @@
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#leadership">Leadership</a>
+      <a href="#cocurricular">Activities</a>
       <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  
+
   <section class="hero pink-bg">
   <div class="hero-box">
     <div class="hero-text">
@@ -667,9 +868,9 @@
 
         <div class="profile-content">
           <p>
-            Motivated Computer Science student seeking an internship opportunity from 7 September to 11 December 2026. 
-            Equipped with a versatile skill set in data analytics, full-stack web development, and academic exposure to 
-            deep learning. Eager to apply hands-on experience in data analysis, web development, and data-driven solutions 
+            Motivated Computer Science student seeking an internship opportunity from 7 September to 11 December 2026.
+            Equipped with a versatile skill set in data analytics, full-stack web development, and academic exposure to
+            deep learning. Eager to apply hands-on experience in data analysis, web development, and data-driven solutions
             while gaining valuable practical experience in a professional environment.
           </p>
 
@@ -691,7 +892,7 @@
     <div class="section-box">
       <h2 class="section-title">Education</h2>
       <div class="title-line"></div>
-    
+
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-img">
@@ -715,12 +916,12 @@
           </div>
 
           <div class="timeline-content">
-            <span class="timeline-year">2022 – 2023</span>
+            <span class="timeline-year">Aug 2022 – Jul 2023</span>
             <h3>Malacca Matriculation College</h3>
-            <h4>Physical Science Programme</h4>
+            <h4>Physical Science Stream</h4>
             <p>
               Continued pre-university studies in the Physical Science stream and obtained
-              a <strong>CGPA of 3.71</strong>. This experience enhanced analytical thinking and 
+              a <strong>CGPA of 3.71</strong>. This experience enhanced analytical thinking and
               problem-solving.
             </p>
           </div>
@@ -732,12 +933,12 @@
           </div>
 
           <div class="timeline-content">
-            <span class="timeline-year">2023 – 2026</span>
+            <span class="timeline-year">Oct 2023 – Present</span>
             <h3>Universiti Teknologi MARA (UiTM)</h3>
-            <h4>Bachelor of Computer Science (Hons.)</h4>
+            <h4>Bachelor of Computer Science (Hons.) &nbsp;·&nbsp; Expected Feb 2027</h4>
             <p>
               Currently pursuing a Bachelor of Computer Science (Hons.) at Universiti Teknologi MARA.
-              Gained academic exposure in programming, software development, artificial intelligence, 
+              Gained academic exposure in programming, software development, artificial intelligence,
               data analytics, database management and data-related projects.
             </p>
           </div>
@@ -751,17 +952,19 @@
   <section class="white-bg" id="experience">
     <div class="section-box">
       <h2 class="section-title">Work Experience</h2>
-    
+
       <div class="experience-container">
         <div class="experience-card">
-          <img src="./images/small-business.jpg" alt="Small Business Owner">
+          <img src="./images/small-business.jpg" alt="Online Handmade Accessories Seller">
 
           <div class="experience-content">
-            <h3>Small Business Owner</h3>
+            <!-- Updated: title and description updated to match resume -->
+            <h3>Online Handmade Accessories Seller</h3>
             <span>2021 – 2024</span>
             <p>
-              Managed a small handmade beaded accessories business, including product creation,
-              customer orders, online promotion, customer communication and basic business management.
+              Managed a small online handmade beaded accessories business, including product creation,
+              customer orders, online promotion, and basic business management. Successfully earned
+              approximately <strong>RM1.5K</strong> through college jumbo booth sales.
             </p>
           </div>
         </div>
@@ -770,24 +973,26 @@
           <img src="./images/duck.jpg" alt="dUCk Scarves Trainee">
 
           <div class="experience-content">
+            <!-- Updated: year corrected to 2022 and description updated to match resume -->
             <h3>dUCk Scarves Trainee</h3>
-            <span>2021</span>
+            <span>2022</span>
             <p>
-              Gained early working experience in a retail environment by assisting with customer service,
-              store operations, product arrangement, and daily sales support.
+              Gained early retail experience by assisting with store cleanliness, product
+              arrangement, and cashier duties.
             </p>
           </div>
         </div>
 
         <div class="experience-card">
-          <img src="./images/polohaus.jpg" alt="POLOHAUS Trainee">
+          <img src="./images/polohaus.jpg" alt="POLO HAUS Trainee">
 
           <div class="experience-content">
-            <h3>POLOHAUS Trainee</h3>
+            <!-- Updated: description updated to match resume -->
+            <h3>POLO HAUS Trainee</h3>
             <span>2026</span>
             <p>
-              Developed workplace exposure through trainee responsibilities involving customer service,
-              task coordination and communication.
+              Assisted customers with product selection, handled cashier duties, and maintained
+              store cleanliness.
             </p>
           </div>
         </div>
@@ -805,22 +1010,24 @@
       <div class="projects-container">
 
         <div class="project-card">
-          <img src="./images/leximath.jpg" alt="LexiMath Handwritten Recognition System">
+          <!-- Replace this with LexiMath GitHub or demo link later -->
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="./images/leximath.jpg" alt="LexiMath Handwritten Recognition System">
+          </a>
           <div class="project-content">
             <span class="project-category">Final Year Project (FYP)</span>
 
-            <h3>LexiMath: Handwritten Recognition System</h3>
+            <h3>LexiMath: Handwritten Math Recognition System</h3>
 
             <p>
-              A real-time handwritten mathematical expression recognition system developed
-              for dyslexic high school students. The system uses a CNN-ViT model to
-              recognize handwritten characters and mathematical symbols.
+              Developed a real-time handwritten mathematical symbol recognition system using a hybrid
+              CNN–ViT model. Applied image preprocessing techniques to improve handwriting clarity
+              before recognition.
             </p>
 
             <p>
               The model achieved <strong>99.78% training accuracy</strong>,
-              <strong>99.44% validation accuracy</strong>,
-              <strong>99.46% best validation accuracy</strong>, and
+              <strong>99.44% validation accuracy</strong>, and
               <strong>99.18% testing accuracy</strong>.
             </p>
 
@@ -831,16 +1038,20 @@
               <span>Python</span>
             </div>
 
-            <a href="#" class="project-btn">View Project Report</a>
+            <!-- Replace this with LexiMath GitHub or demo link later -->
+            <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">View Project Report</a>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="./images/online-bakery.jpg" alt="Online Bakery Ordering and Pickup System">
+          <!-- Replace href with project GitHub or demo link when ready -->
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="./images/online-bakery.jpg" alt="Online Bakery Ordering and Pickup System">
+          </a>
           <div class="project-content">
             <span class="project-category">Web Development Project</span>
 
-            <h3>Online Bakery Ordering & Pickup System</h3>
+            <h3>Online Bakery Ordering &amp; Pickup System</h3>
 
             <p>
               A web-based bakery ordering system that allows customers to browse products,
@@ -860,12 +1071,16 @@
               <span>JavaScript</span>
             </div>
 
-            <a href="#" class="project-btn">View Project Report</a>
+            <!-- Replace href with project GitHub or demo link when ready -->
+            <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">View Project Report</a>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="./images/kesatria-uniform.jpg" alt="Komander Kesatria Uniform Management System">
+          <!-- Replace href with project GitHub or demo link when ready -->
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="./images/kesatria-uniform.jpg" alt="Komander Kesatria Uniform Management System">
+          </a>
           <div class="project-content">
             <span class="project-category">Software Engineering Project</span>
 
@@ -885,12 +1100,16 @@
               <span>STR Document</span>
             </div>
 
-            <a href="#" class="project-btn">View Project Report</a>
+            <!-- Replace href with project GitHub or demo link when ready -->
+            <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">View Project Report</a>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="./images/little-hospital-hero.jpg" alt="Little Hospital Hero Game">
+          <!-- Replace href with project GitHub or demo link when ready -->
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="./images/little-hospital-hero.jpg" alt="Little Hospital Hero Game">
+          </a>
           <div class="project-content">
             <span class="project-category">Game Development Project</span>
 
@@ -910,33 +1129,31 @@
               <span>Game Development</span>
             </div>
 
-            <a href="#" class="project-btn">View Project Report</a>
+            <!-- Replace href with project GitHub or demo link when ready -->
+            <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">View Project Report</a>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="./images/dyslexia-knn.jpg" alt="Dyslexia Prediction System">
+          <!-- Replace href with project GitHub or demo link when ready -->
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="./images/dyslexia-knn.jpg" alt="Dyslexia Prediction System">
+          </a>
           <div class="project-content">
             <span class="project-category">Data Analytics / Intelligent System Project</span>
 
-            <h3>An Intelligent Prediction System for Early Dyslexia Symptoms</h3>
+            <h3>Prediction System for Early Dyslexia Symptoms</h3>
 
             <p>
-              Designed an intelligent prediction system using the
-              <strong>K-Nearest Neighbors (KNN)</strong> algorithm to predict dyslexia
-              risk based on early symptoms.
+              Developed a <strong>K-Nearest Neighbors (KNN)</strong> prediction system to identify
+              dyslexia risk based on early symptoms. Performed data analysis and visualization to
+              identify trends and patterns among respondents.
             </p>
 
             <p>
-              Performed data analysis, created visualizations, designed a KNN-based
-              predictive model, and evaluated the accuracy of the developed model.
-            </p>
-
-            <p>
-              The model achieved an overall <strong>accuracy of 83%</strong>, with a
-              weighted average <strong>precision of 0.83</strong>,
-              <strong>recall of 0.83</strong>, and <strong>F1-score of 0.83</strong>,
-              showing balanced classification performance.
+              Achieved an overall <strong>accuracy of 83%</strong>, with a weighted average
+              <strong>precision of 0.83</strong>, <strong>recall of 0.83</strong>, and
+              <strong>F1-score of 0.83</strong>.
             </p>
 
             <div class="project-tags">
@@ -945,10 +1162,10 @@
               <span>Data Analytics</span>
               <span>Deep Learning</span>
               <span>Data Cleaning</span>
-          
             </div>
 
-            <a href="#" class="project-btn">View Project Report</a>
+            <!-- Replace href with project GitHub or demo link when ready -->
+            <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">View Project Report</a>
           </div>
         </div>
 
@@ -965,31 +1182,49 @@
 
       <div class="leadership-container">
 
+        <!-- 2026 -->
         <div class="leadership-card">
-          <h3>Leftenan Muda Kesatria, Series 21/2026</h3>
+          <img src="images/leftenan-muda.jpg" alt="Leftenan Muda Kesatria" class="activity-img">
+          <h3>Leftenan Muda Kesatria (2026)</h3>
           <p>
-            Appointed as Leftenan Muda Kesatria, Series 21/2026. Developed leadership,
-            discipline, teamwork, communication, and responsibility through uniform body activities.
+            Commissioned as Leftenan Muda Kesatria 2026 upon the successful completion of two years
+            of training. Developed leadership, discipline, teamwork, and communication skills.
           </p>
         </div>
 
+        <!-- 2026 -->
         <div class="leadership-card">
-          <h3>Event Committee for Top Coders 2025</h3>
+          <img src="images/sulam.jpg" alt="Protocol Bureau for SULAM Carnival" class="activity-img">
+          <h3>Protocol Bureau, SULAM Carnival (2026)</h3>
           <p>
-            Contributed as an event committee member by supporting programme preparation,
-            coordination, communication, and event execution.
+            Assisted in facilitating school students and programme procedures during the
+            SULAM Carnival as part of the Protocol Bureau.
           </p>
         </div>
 
+        <!-- 2024 & 2025 -->
         <div class="leadership-card">
-          <h3>Multimedia Bureau Member of Komander Kesatria</h3>
+          <img src="images/top-coders.jpg" alt="Top Coders National Level Coding Challenge" class="activity-img">
+          <h3>Top Coders: National Level Coding Challenge (2024 &amp; 2025)</h3>
           <p>
-            Assisted in multimedia-related tasks such as preparing visual content, supporting event
-            documentation, and contributing to digital materials for activities.
+            Served as an emcee and helped support the event flow for the Top Coders national
+            level coding challenge for two consecutive years.
           </p>
         </div>
 
+        <!-- 2025 -->
         <div class="leadership-card">
+          <img src="images/multimedia-komander.jpg" alt="Multimedia Committee Komander Kesatria UiTM Jasin" class="activity-img">
+          <h3>Multimedia Committee, Komander Kesatria UiTM Jasin (2025)</h3>
+          <p>
+            Prepared visual content for events, programmes, and announcements. Contributed
+            to digital materials and event documentation for activities.
+          </p>
+        </div>
+
+        <!-- 2025 -->
+        <div class="leadership-card">
+          <img src="images/cocurricular.jpg" alt="Score Orienteering Competition 2025" class="activity-img">
           <h3>Score Orienteering Competition 2025</h3>
           <p>
             Participated in the Score Orienteering Competition for Komander Kesatria Endurance Challenge 2025
@@ -997,36 +1232,118 @@
           </p>
         </div>
 
+        <!-- 2022 -->
+        <div class="leadership-card">
+          <img src="images/pal-mathematics.jpg" alt="Mathematics Peer Assisted Learning Committee" class="activity-img">
+          <h3>Mathematics Peer Assisted Learning Committee (2022)</h3>
+          <p>
+            Assisted PAL members in conducting extra mathematics classes to support
+            fellow students' academic performance.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <!-- NEW: CO-CURRICULAR ACTIVITIES SECTION -->
+  <section class="pink-bg" id="cocurricular">
+    <div class="section-box">
+      <h2 class="section-title">Co-Curricular Activities</h2>
+      <div class="title-line"></div>
+      <p class="section-subtitle">Competitions, awards, and hands-on experiences beyond the classroom.</p>
+
+      <div class="leadership-container">
+
+        <div class="leadership-card">
+          <img src="images/cocurricular.jpg" alt="Outdoor Recreation Level 1" class="activity-img">
+          <h3>Outdoor Recreation Level 1 (2025)</h3>
+          <p>
+            Completed OUTREC Level 1 with hands-on experience in abseiling, water confidence,
+            kayaking, map reading, and basic navigation.
+          </p>
+        </div>
+
+        <div class="leadership-card">
+          <img src="images/cocurricular.jpg" alt="Data Storytelling Competition 2025" class="activity-img">
+          <h3>Data Storytelling Competition (2025)</h3>
+          <p>
+            Participated in a Data Storytelling Competition by using data to explain and visualise
+            state issues through compelling data-driven narratives.
+          </p>
+        </div>
+
+        <div class="leadership-card">
+          <img src="images/cocurricular.jpg" alt="The Duke of Edinburgh's International Award" class="activity-img">
+          <h3>The Duke of Edinburgh's International Award (2025)</h3>
+          <p>
+            Completed Bronze Level Award with 72 credit hours across community service, skills
+            development, physical recreation, and an adventurous journey.
+          </p>
+        </div>
+
+        <div class="leadership-card">
+          <img src="images/cocurricular.jpg" alt="Score Orienteering Komander Kesatria Endurance Challenge 2025" class="activity-img">
+          <h3>Score Orienteering — Komander Kesatria Endurance Challenge (2025)</h3>
+          <p>
+            Participated in the Score Orienteering category and achieved <strong>5th place</strong>,
+            demonstrating endurance, teamwork, and navigation under pressure.
+          </p>
+        </div>
+
+        <div class="leadership-card">
+          <img src="images/cocurricular.jpg" alt="Virtual Innovation Competition Bronze Award 2022" class="activity-img">
+          <h3>Virtual Innovation Competition — Bronze Award (2022)</h3>
+          <p>
+            Awarded <strong>Bronze</strong> in Virtual Innovation Competition 2022 for developing
+            AR-Bin, an automated 3R recycle bin using basic sensor technology.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END CO-CURRICULAR ACTIVITIES SECTION -->
 
   <!-- SKILLS -->
   <section class="pink-bg" id="skills">
     <div class="section-box">
       <h2 class="section-title">Skills</h2>
-  
 
+
+      <!-- Updated: skills grouped by category, missing tools added from resume -->
       <div class="skills-container">
+
+        <span class="skill-group-label">Languages</span>
         <span class="skill-tag">Python</span>
         <span class="skill-tag">C++</span>
         <span class="skill-tag">C#</span>
-        <span class="skill-tag">Power Bi</span>
-        <span class="skill-tag">Excel</span>
         <span class="skill-tag">Java</span>
+        <span class="skill-tag">JSP</span>
         <span class="skill-tag">PHP</span>
-        <span class="skill-tag">MySQL</span>
-        <span class="skill-tag">PHPMyAdmin</span>
-        <span class="skill-tag">CRUD</span>
-        <span class="skill-tag">HTML</span>
-        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">HTML / CSS</span>
         <span class="skill-tag">JavaScript</span>
+
+        <span class="skill-group-label">Database</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">phpMyAdmin</span>
+
+        <span class="skill-group-label">Tools</span>
+        <span class="skill-tag">VS Code</span>
+        <span class="skill-tag">Android Studio</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Tableau</span>
+        <span class="skill-tag">Excel</span>
+        <span class="skill-tag">Word</span>
+        <span class="skill-tag">Canva</span>
+
+        <span class="skill-group-label">Concepts</span>
         <span class="skill-tag">Deep Learning</span>
-        <span class="skill-tag">Image Processing</span>
-        <span class="skill-tag">Data Analytics</span>
         <span class="skill-tag">Machine Learning</span>
+        <span class="skill-tag">Data Analytics</span>
+        <span class="skill-tag">Image Processing</span>
         <span class="skill-tag">Problem Solving</span>
-        
+
       </div>
     </div>
   </section>
