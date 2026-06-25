@@ -716,6 +716,21 @@
   </footer>
 
   <script>
+    // Auto-assign correct background-position for each tile based on its grid position
+    const allCells = Array.from(document.querySelectorAll(".kv-cell"));
+    const COLS = 5, ROWS = 5;
+    let col = 0, row = 0;
+    allCells.forEach(function(cell) {
+      if (!cell.classList.contains("kv-fixed-cell")) {
+        const xPct = COLS === 1 ? 0 : (col / (COLS - 1)) * 100;
+        const yPct = ROWS === 1 ? 0 : (row / (ROWS - 1)) * 100;
+        cell.style.backgroundPosition = xPct + "% " + yPct + "%";
+      }
+      col++;
+      if (col >= COLS) { col = 0; row++; }
+    });
+
+    // Random white flash effect
     const kvFlashCells = Array.from(document.querySelectorAll(".kv-cell:not(.kv-fixed-cell)"));
     function flashRandomKvCell() {
       if (!kvFlashCells.length) return;
