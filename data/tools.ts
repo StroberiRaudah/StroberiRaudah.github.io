@@ -11,7 +11,11 @@ import {
   siMariadb,
   siMaterialdesign,
   siMysql,
+  siNextdotjs,
   siPhp,
+  siReact,
+  siTailwindcss,
+  siTypescript,
 } from "simple-icons";
 
 /** A brand logo (filled path) or a hand-drawn glyph (stroked path), both on a 24×24 grid. */
@@ -60,6 +64,10 @@ export const toolGroups: ToolGroup[] = [
       { role: "Language", name: "Dart", desc: "Typed, fast, made for UI", color: "#0175C2", icon: brand(siDart) },
       { role: "State", name: "Riverpod", desc: "Reactive, testable app state", color: "#5E2B40", icon: glyph(glyphs.river) },
       { role: "Design system", name: "Material 3", desc: "Consistent, accessible UI components", color: "#757575", icon: brand(siMaterialdesign) },
+      { role: "Web framework", name: "Next.js", desc: "React framework with routing and static export", color: "#000000", icon: brand(siNextdotjs) },
+      { role: "UI library", name: "React", desc: "Component-based UI for the web", color: "#087EA4", icon: brand(siReact) },
+      { role: "Language", name: "TypeScript", desc: "JavaScript with types", color: "#3178C6", icon: brand(siTypescript) },
+      { role: "Styling", name: "Tailwind CSS", desc: "Utility-first, responsive styling", color: "#06B6D4", icon: brand(siTailwindcss) },
     ],
   },
   {
@@ -67,7 +75,6 @@ export const toolGroups: ToolGroup[] = [
     tools: [
       { role: "UI design", name: "Figma", desc: "Wireframes, flows and polished mockups", color: "#F24E1E", icon: brand(siFigma) },
       { role: "AI design", name: "Claude Design", desc: "Fast layout ideas and clickable prototypes", color: "#D97757", icon: brand(siClaude) },
-      { role: "Design system", name: "Material 3", desc: "Colour, type and components I build on", color: "#757575", icon: brand(siMaterialdesign) },
     ],
   },
   {
