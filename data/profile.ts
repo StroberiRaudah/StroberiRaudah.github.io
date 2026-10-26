@@ -4,7 +4,7 @@ export const profile = {
   role: "Full-Stack Developer Intern @ SOCSO",
   university: "Universiti Teknologi MARA",
   about: { before: "I love building apps that ", highlight: "work everywhere", after: "." },
-  email: "[sssitiraudah@gmail.com]",
+  email: "sssitiraudah@gmail.com",
   links: {
     github: "https://github.com/StroberiRaudah",
     linkedin: "https://www.linkedin.com/in/siti-raudah-551371240/",
