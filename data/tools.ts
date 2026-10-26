@@ -1,5 +1,4 @@
 import {
-  siApple,
   siClaude,
   siDart,
   siFigma,
@@ -13,8 +12,6 @@ import {
   siMysql,
   siNextdotjs,
   siPhp,
-  siReact,
-  siTailwindcss,
   siTypescript,
 } from "simple-icons";
 
@@ -36,7 +33,6 @@ const glyph = (path: string): ToolIcon => ({ kind: "stroke", path });
 
 // Tools with no official mark in Simple Icons get a simple line glyph.
 const glyphs = {
-  key: "M18.5 8.5a3.5 3.5 0 1 1-7 0a3.5 3.5 0 1 1 7 0z M12.2 10.8 4 19 M6.5 16.5l2 2 M8.8 14.2l1.8 1.8",
   waves: "M12 12h.01 M8.5 8.5a5 5 0 0 0 0 7 M15.5 8.5a5 5 0 0 1 0 7 M5.6 5.6a9 9 0 0 0 0 12.8 M18.4 5.6a9 9 0 0 1 0 12.8",
   braces: "M8 4H7a2 2 0 0 0-2 2v4l-2 2 2 2v4a2 2 0 0 0 2 2h1 M16 4h1a2 2 0 0 1 2 2v4l2 2-2 2v4a2 2 0 0 1-2 2h-1 M10 12h.01 M14 12h.01",
   river: "M3 7c3-3 6 3 9 0s6 3 9 0 M3 12c3-3 6 3 9 0s6 3 9 0 M3 17c3-3 6 3 9 0s6 3 9 0",
@@ -48,10 +44,8 @@ export const toolGroups: ToolGroup[] = [
     tools: [
       { role: "Framework", name: "Laravel", desc: "APIs, queues and business logic", color: "#FF2D20", icon: brand(siLaravel) },
       { role: "Language", name: "PHP", desc: "What the server speaks", color: "#777BB4", icon: brand(siPhp) },
-      { role: "Auth", name: "LDAP", desc: "Directory-based authentication", color: "#5E2B40", icon: glyph(glyphs.key) },
       { role: "Real-time", name: "Laravel Reverb", desc: "WebSocket server for live updates", color: "#FF2D20", icon: glyph(glyphs.waves) },
-      { role: "Push · Android & web", name: "Firebase FCM", desc: "Cloud messaging and push notifications", color: "#DD2C00", icon: brand(siFirebase) },
-      { role: "Push · iOS", name: "APNs", desc: "Apple Push Notification service", color: "#2A1820", icon: brand(siApple) },
+      { role: "Push", name: "Firebase FCM", desc: "Cloud messaging and push notifications", color: "#DD2C00", icon: brand(siFirebase) },
       { role: "API", name: "REST + JSON", desc: "One clean contract for app and server", color: "#6B5B8C", icon: glyph(glyphs.braces) },
       { role: "Database", name: "MySQL", desc: "Relational SQL database", color: "#4479A1", icon: brand(siMysql) },
       { role: "Database", name: "MariaDB", desc: "Open-source, MySQL-compatible database", color: "#003545", icon: brand(siMariadb) },
@@ -65,9 +59,7 @@ export const toolGroups: ToolGroup[] = [
       { role: "State", name: "Riverpod", desc: "Reactive, testable app state", color: "#5E2B40", icon: glyph(glyphs.river) },
       { role: "Design system", name: "Material 3", desc: "Consistent, accessible UI components", color: "#757575", icon: brand(siMaterialdesign) },
       { role: "Web framework", name: "Next.js", desc: "React framework with routing and static export", color: "#000000", icon: brand(siNextdotjs) },
-      { role: "UI library", name: "React", desc: "Component-based UI for the web", color: "#087EA4", icon: brand(siReact) },
       { role: "Language", name: "TypeScript", desc: "JavaScript with types", color: "#3178C6", icon: brand(siTypescript) },
-      { role: "Styling", name: "Tailwind CSS", desc: "Utility-first, responsive styling", color: "#06B6D4", icon: brand(siTailwindcss) },
     ],
   },
   {
