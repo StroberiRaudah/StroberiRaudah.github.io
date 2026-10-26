@@ -4,17 +4,17 @@ export const profile = {
   role: "Full-Stack Developer Intern @ SOCSO",
   university: "Universiti Teknologi MARA",
   about: { before: "I love building apps that ", highlight: "work everywhere", after: "." },
-  email: "[your-email]",
+  email: "[sssitiraudah@gmail.com]",
   links: {
-    github: "https://github.com/",
-    linkedin: "https://linkedin.com/",
+    github: "https://github.com/StroberiRaudah",
+    linkedin: "https://www.linkedin.com/in/siti-raudah-551371240/",
   },
   motto: [
-    "I love to build.",
-    "Real things, made just by writing.",
-    "From a blank file to a working app.",
+    "I love to build",
+    "made just by writing",
+    "From a blank file to 1 clean app.",
   ],
   year: 2026,
   credits:
-    "Designed with Claude Design & Figma · Built with Next.js · Icons by Simple Icons · Illustration by [artist]",
+    "Built with Next.js",
 } as const;
