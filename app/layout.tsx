@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Raudah — Full-Stack Developer",
+  title: "siti Raudah",
   description: "I build cross-platform apps, from front to back.",
   icons: { icon: "/avatar.png" },
 };
