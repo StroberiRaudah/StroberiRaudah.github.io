@@ -1,4 +1,5 @@
 import { About } from "@/components/About";
+import { CatchingUp } from "@/components/CatchingUp";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Motto />
       <Tools />
+      <CatchingUp />
       <Contact />
       <Footer />
     </main>

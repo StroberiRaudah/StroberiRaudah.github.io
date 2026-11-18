@@ -11,7 +11,7 @@ export function Tools() {
           className="grid gap-3.5 border-t border-line pt-5 md:grid-cols-[200px_minmax(0,1fr)] md:gap-8 md:pt-7"
         >
           <h3 className="font-display text-2xl font-bold tracking-[-0.03em] text-plum md:text-[30px]">{group.label}</h3>
-          <div className="grid grid-cols-2 gap-2.5 md:gap-3 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-2.5 lg:grid-cols-3 lg:gap-3">
             {group.tools.map((tool, i) => (
               <ToolCard key={`${group.label}-${tool.name}`} tool={tool} index={i} />
             ))}

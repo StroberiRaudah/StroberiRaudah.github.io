@@ -1,20 +1,20 @@
 export const profile = {
   name: "Raudah",
-  hook: "I build cross-platform apps, from front to back.",
-  role: "Full-Stack Developer Intern @ SOCSO",
+  hook: "I turn ideas into working software.",
+  role: "IT Intern @ SOCSO",
   university: "Universiti Teknologi MARA",
-  about: { before: "I love building apps that ", highlight: "work everywhere", after: "." },
-  email: "sssitiraudah@gmail.com",
+  about: { before: "I love coding, ", highlight: "front to back", after: " and everything in between." },
+  email: "[your-email]",
   links: {
-    github: "https://github.com/StroberiRaudah",
-    linkedin: "https://www.linkedin.com/in/siti-raudah-551371240/",
+    github: "https://github.com/",
+    linkedin: "https://linkedin.com/",
   },
   motto: [
-    "I love to build",
-    "made just by writing",
-    "From a blank file to 1 clean app.",
+    "I love to build.",
+    "Real things, made just by writing.",
+    "From a blank file to something that works.",
   ],
   year: 2026,
   credits:
-    "Built with Next.js",
+    "Designed with Claude Design & Figma · Built with Next.js · Icons by Simple Icons · Illustration by [artist]",
 } as const;
