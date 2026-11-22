@@ -1,23 +1,28 @@
-import { About } from "@/components/About";
+import { Beyond } from "@/components/Beyond";
 import { CatchingUp } from "@/components/CatchingUp";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Motto } from "@/components/Motto";
+import { Projects } from "@/components/Projects";
 import { Tools } from "@/components/Tools";
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-[1040px] px-5 md:px-8">
-      <Header />
-      <Hero />
-      <About />
-      <Motto />
-      <Tools />
-      <CatchingUp />
-      <Contact />
-      <Footer />
-    </main>
+    // The project carousel reaches past the column; clip it at the screen edge.
+    <div className="overflow-x-clip">
+      <main className="mx-auto w-full max-w-[1040px] px-5 md:px-8">
+        <Header />
+        <Hero />
+        <Motto />
+        <Projects />
+        <Tools />
+        <Beyond />
+        <CatchingUp />
+        <Contact />
+        <Footer />
+      </main>
+    </div>
   );
 }

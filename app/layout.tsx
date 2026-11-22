@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Siti Raudah",
-  description: "I build cross-platform apps, from front to back.",
+  description: "I turn ideas into working software.",
   icons: { icon: "/avatar.png" },
 };
 

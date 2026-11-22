@@ -89,7 +89,7 @@ export const toolGroups: ToolGroup[] = [
       { role: "Markup", name: "HTML / CSS", desc: "Semantic, accessible pages", color: "#E34F26", icon: brand(siHtml5) },
       { role: "Styling", name: "Tailwind CSS", desc: "Utility-first, responsive styling", color: "#06B6D4", icon: brand(siTailwindcss) },
       { role: "Mobile", name: "Flutter", desc: "One codebase for Android and iOS", color: "#02569B", icon: brand(siFlutter) },
-      { role: "Backend as a service", name: "Firebase", desc: "Data, auth and push notifications", color: "#DD2C00", icon: brand(siFirebase) },
+      { role: "Cloud backend", name: "Firebase", desc: "Data, auth and push notifications", color: "#DD2C00", icon: brand(siFirebase) },
     ],
   },
   {

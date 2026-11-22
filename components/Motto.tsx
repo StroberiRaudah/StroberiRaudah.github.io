@@ -12,7 +12,7 @@ export function Motto() {
   const typed = useTypewriter(profile.motto);
 
   return (
-    <section className="flex flex-col gap-3.5 pb-22 md:gap-5 md:pb-30">
+    <section className="flex flex-col gap-3.5 pb-22 md:gap-5 md:pb-34">
       <Label>best said in code</Label>
       <div className="overflow-hidden rounded-3xl bg-ink shadow-[0_30px_60px_rgba(42,24,32,0.18)] md:rounded-[28px]">
         <div className="flex items-center gap-1.5 border-b border-[#3D2A33] px-5 py-4 md:px-6">

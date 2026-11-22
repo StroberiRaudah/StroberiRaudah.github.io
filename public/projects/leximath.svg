@@ -1,0 +1,15 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='480' height='320' viewBox='0 0 480 320'>
+<defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#E6DFF2'/><stop offset='1' stop-color='#C9BCE4'/></linearGradient>
+<filter id='s' x='-20%' y='-20%' width='140%' height='140%'><feDropShadow dx='0' dy='10' stdDeviation='12' flood-color='#2A1820' flood-opacity='.22'/></filter></defs>
+<rect width='480' height='320' fill='url(#g)'/><g filter='url(#s)'><rect x='40' y='56' width='200' height='208' rx='18' fill='#FFFDF7'/>
+<line x1='56' y1='100' x2='224' y2='100' stroke='#E6DAD6'/><line x1='56' y1='128' x2='224' y2='128' stroke='#E6DAD6'/><line x1='56' y1='156' x2='224' y2='156' stroke='#E6DAD6'/><line x1='56' y1='184' x2='224' y2='184' stroke='#E6DAD6'/><line x1='56' y1='212' x2='224' y2='212' stroke='#E6DAD6'/><line x1='56' y1='240' x2='224' y2='240' stroke='#E6DAD6'/>
+<path d='M66 150 q10 -30 22 0 t22 0 M120 132 l10 26 M130 132 l-10 26 M146 140 h18 M155 131 v18 M176 132 q14 -6 14 8 q0 10 -14 18 h18' fill='none' stroke='#2A1820' stroke-width='3' stroke-linecap='round'/>
+<rect x='60' y='118' width='150' height='52' rx='6' fill='none' stroke='#00A3A3' stroke-width='2' stroke-dasharray='5 4'/>
+<text x='60' y='112' font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' font-size='9' fill='#00A3A3'>YOLO · 5 symbols</text></g>
+<path d='M252 160 h30 m-8 -7 l8 7 -8 7' fill='none' stroke='#5E2B40' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/>
+<g filter='url(#s)'><rect x='294' y='70' width='150' height='180' rx='18' fill='#2A1820'/>
+<text x='310' y='98' font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' font-size='9' fill='#A88A98'>CNN–ViT · 99.18%</text>
+<text x='310' y='132' font-family='-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,sans-serif' font-size='20' font-weight='700' fill='#F3ECEF'>x² + 2 = 6</text>
+<text x='310' y='160' font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' font-size='10' fill='#F3D9A4'>x² = 4</text><text x='310' y='180' font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' font-size='10' fill='#F3D9A4'>x = ±2</text>
+<rect x='310' y='200' width='70' height='18' rx='9' fill='#4E9A6A'/><text x='345' y='212' text-anchor='middle' font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' font-size='8' fill='#FFFFFF'>✓ SymPy</text>
+<text x='310' y='236' font-family='-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,sans-serif' font-size='9' fill='#A88A98'>Lexend · focus mode</text></g></svg>

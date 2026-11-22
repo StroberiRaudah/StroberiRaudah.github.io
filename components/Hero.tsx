@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="flex animate-rise flex-col-reverse items-start gap-6 pt-8 pb-16 md:flex-row md:items-end md:justify-between md:gap-10 md:pt-14"
+      className="flex animate-rise flex-col-reverse items-start gap-6 pt-8 pb-20 md:flex-row md:pb-30 md:items-end md:justify-between md:gap-10 md:pt-14"
     >
       <div className="flex min-w-0 flex-1 flex-col gap-6 md:gap-8 md:pb-6">
         <h1 className="font-display text-[64px] leading-[0.95] font-bold tracking-[-0.05em] md:text-[124px]">
@@ -20,7 +20,10 @@ export function Hero() {
           <span>{profile.role}</span>
           <span className="inline-flex items-center gap-2.5">
             <Image src="/uitm.png" alt="UiTM logo" width={24} height={30} className="h-[30px] w-auto" />
-            {profile.university}
+            <span className="flex flex-col gap-0.5">
+              <span>{profile.degree}</span>
+              <span>{profile.university}</span>
+            </span>
           </span>
         </div>
       </div>

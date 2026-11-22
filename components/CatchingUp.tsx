@@ -3,7 +3,7 @@ import { Label } from "./Label";
 
 export function CatchingUp() {
   return (
-    <section className="flex flex-col gap-3.5 pb-16 md:gap-5 md:pb-30">
+    <section className="flex flex-col gap-3.5 pb-22 md:gap-5 md:pb-34">
       <Label>catching up on</Label>
       <div
         aria-label="Catching up on"
