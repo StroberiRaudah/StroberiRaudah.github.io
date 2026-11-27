@@ -30,11 +30,11 @@ export const projects: Project[] = [
   },
   {
     name: "Smart Booking",
-    kind: "Room booking · PERKESO internship",
+    kind: "Room & vehicle booking · PERKESO internship",
     year: "2026",
-    img: "/projects/booking.svg",
-    desc: "One app for Android and iOS with live availability, approvals and push alerts. When a slot clashes, it suggests another room or time.",
-    stack: ["Flutter", "Dart", "Laravel", "PHP", "REST + JSON", "MySQL", "Firebase", "Laravel Reverb"],
+    img: "/projects/booking.jpg",
+    desc: "One Flutter app for Android and iOS to book meeting rooms and official cars. Staff sign in with their work account, see live availability and approvals, and get push alerts; drivers follow each trip on Google Maps. When a slot clashes, it suggests another room or time.",
+    stack: ["Flutter", "Dart", "Laravel", "PHP", "REST + JSON", "MySQL", "Firebase", "Laravel Reverb", "LDAP", "Google Maps"],
   },
   {
     name: "This portfolio",
